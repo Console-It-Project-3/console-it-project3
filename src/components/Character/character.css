@@ -1,0 +1,13 @@
+.sprite{
+    /* background: url("https://i.imgur.com/V9lM1rl.png"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 950px;
+    position: absolute;
+    display: block;
+    color: white;
+    margin-right: 900px;
+    left: -175px;
+   
+}

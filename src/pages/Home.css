@@ -1,0 +1,17 @@
+button:focus {
+    outline: 0;
+}
+
+.navbar .dropdown-menu .form-control {
+    width: 200px;
+}
+.jumbotron{
+    margin:auto;
+    margin-top:15%;
+    max-width: 475px;
+    background: rgba(220,220,220, 0.875);
+
+}
+.btn btn-primary btn-lg justify-content-end{
+    margin: auto;
+}

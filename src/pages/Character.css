@@ -1,0 +1,37 @@
+.charContain{
+    position: relative;
+}
+
+.left, .right{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 60px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 3;
+    text-shadow:0 0 15px black;
+
+}
+
+.left{
+    top: 325px;
+    left: 80px;
+}
+.right{
+    top: 325px;
+    left: 470px;
+}
+.choose{
+    position: absolute;
+    top: 575px;
+    left: 205px;
+    background: green;
+    border: 2px solid;
+    box-shadow: 0 0 15px black;
+    width: 200px;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    
+}
