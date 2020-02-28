@@ -1,10 +1,17 @@
-const express = require("express");
-const path = require("path");
-const mongoose = require("mongoose");
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
+const morgan = require('morgan');
+const mongoose = require('mongoose');
+const session = require('express-session');
+// const dbConnection = require('./connection');
+const MongoStore = require('connect-mongo')(session);
+const passport = require('./passport');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
 const apiRoutes = require("./routes/api");
+const user = require('./routes/api/user')
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -13,6 +20,14 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+
+app.use(morgan('dev'))
+app.use(
+    bodyParser.urlencoded({
+        extended: false
+    })
+)
+app.use(bodyParser.json())
 
 // Connect to the Mongo DB
 mongoose.connect(
@@ -23,6 +38,26 @@ mongoose.connect(
 // Use apiRoutes
 app.use("/api", apiRoutes);
 
+// Sessions
+app.use(
+  session({
+      secret: 'special-harkening', //pick a random string to make the hash that is generated secure
+      // store: new MongoStore({ mongooseConnection: dbConnection }),
+      resave: false, //required
+      saveUninitialized: false //required
+  })
+)
+
+// Passport
+app.use(passport.initialize())
+app.use(passport.session()) // calls the deserializeUser
+
+app.use(express.static(path.join(__dirname, "client", "build")))
+// Routes
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "public", "index.html"));
+});
+// app.use('/user', user)
 // Send every request to the React app
 // Define any API routes before this runs
 // app.get("*", function(req, res) {
