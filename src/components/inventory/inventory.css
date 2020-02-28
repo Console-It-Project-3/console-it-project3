@@ -1,0 +1,40 @@
+.invenBox{
+    display: block;
+    width: 400px;
+    height: 500px;
+    background:url("https://i.imgur.com/0XoMcjD.png");
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: 20%;
+    left: 33%;
+}
+.invenHead{
+    padding-top: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+.items{
+    padding-left: 100px;
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+.itemBtn, .closeBtn{
+    background: green;
+    border: none;
+    border-radius: 10px;
+}
+.itemBtn{
+    height: 30px;
+    vertical-align: center;
+}
+.closeBtn{
+   position: absolute;
+   padding: 7px 25px;
+   top: 375px;
+   left: 150px;
+}
+.hide{
+    display: none;
+}
