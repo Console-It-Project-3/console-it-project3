@@ -8,7 +8,7 @@ class Signup extends Component {
 
             <div className="signup-box">
                 <div className="container-signup">
-                    <form className="needs-validation" novalidate>
+                    <form className="needs-validation" noValidate>
                         <div className="form-row">
                             <div className="col-md-4 mb-3">
                                  <label for="validationCustom01">First name: </label>
