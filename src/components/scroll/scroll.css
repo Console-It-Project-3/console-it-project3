@@ -2,6 +2,8 @@
     background: url("https://i.imgur.com/57TTWUF.png");
     margin: 0;
     width: 100vw;
+    height: 100vh;
+    /* margin-right: 400px; */
     /* position: relative; */
  
 }
@@ -10,9 +12,11 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     width: 400px;
-    height: 750px;
-    margin-left: 130px;
-    margin-right: 5%;
+    height: 715px;
+    margin-left: 40px;
+    position: absolute;
+    z-index: 1;
+    /* margin-right: 100px; */
 
     
 }   

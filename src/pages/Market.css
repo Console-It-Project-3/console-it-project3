@@ -1,0 +1,77 @@
+.marketBackground{
+    background: url("https://i.imgur.com/7jnrlAg.jpg");
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 100vh;
+}
+.merchant{
+    background: url("https://i.imgur.com/11PiIR0.png");
+    background-size: 110vh 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+}
+.marketScroll{
+    background: url("https://i.imgur.com/0XoMcjD.png");
+    background-size: 100% 100%;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    height: 680px;
+    width: 450px;
+}
+.marketText{
+    padding-top: 100px;
+    padding-left: 100px;
+    color:black;
+    font-size: 20px;
+    font-weight: bold;
+}
+.marketButtons{
+    position: absolute;
+    right: 300px;
+    bottom: 200px;
+}
+.mBtn1,
+.mBtn2,
+.mBtn3,
+.mBtn4{
+    border-radius: 15px;
+    background: green;
+    border: black;
+    padding: 10px 15px;
+    width:150px;
+    font-size: 25px;
+    position: absolute;
+}
+.mBtn1{
+    position: absolute;
+    bottom: 80px;
+    right: -65px;
+}
+.mBtn2{
+    position: absolute;
+    bottom: 80px;
+    right: -240px;
+}
+.mBtn3{
+    position: absolute;
+    bottom: 0px;
+    right: -65px;
+}
+.mBtn4{
+    position: absolute;
+    bottom: 0px;
+    right: -240px;
+}
+.shopLi{
+    list-style-type: none;
+    margin-top: 5px;
+}
+.buyBtn, .sellBtn{
+    height: 30px;
+    vertical-align: center;
+    background: green;
+    border: none;
+    border-radius: 10px;
+    margin-right: 10px;
+}
