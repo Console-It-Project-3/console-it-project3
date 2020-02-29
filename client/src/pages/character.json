@@ -1,0 +1,22 @@
+[
+    {
+        "class": "Archer",
+        "url": "https://i.imgur.com/jHqhE2r.png",
+        "description": "This is an Archer, they shoot pointy things."
+    },
+    {
+        "class": "Paladin",
+        "url": "https://i.imgur.com/D4yza7R.png",
+        "description": "This armor slows me down."
+    },
+    {
+        "class": "Mage",
+        "url": "https://i.imgur.com/t75P6vK.png",
+        "description": "I think I'm special cause magics"
+    },
+    {
+        "class": "Warrior",
+        "url": "https://i.imgur.com/ODs4zDn.gif",
+        "description": "I has sword"
+    }
+]

@@ -2,30 +2,11 @@
     position: relative;
 }
 
-.left, .right{
-    background: none;
-    border: none;
-    color: white;
-    font-size: 60px;
-    position: absolute;
-    cursor: pointer;
-    z-index: 3;
-    text-shadow:0 0 15px black;
 
-}
-
-.left{
-    top: 325px;
-    left: 80px;
-}
-.right{
-    top: 325px;
-    left: 470px;
-}
 .choose{
     position: absolute;
-    top: 575px;
-    left: 205px;
+    top: 600px;
+    left: 275px;
     background: green;
     border: 2px solid;
     box-shadow: 0 0 15px black;
@@ -35,3 +16,21 @@
     border-radius: 10px;
     
 }
+.sprite{
+    /* padding-left: 100px; */
+     position: absolute;
+     
+     left: 85px;
+     max-height: 200px;
+     min-height: 200px;
+     z-index: 3;
+    
+ }
+
+ .testText{
+     position: absolute;
+     right: -40px;
+     top: 300px;
+     z-index: 3;
+     color: white;
+ }

@@ -5,13 +5,13 @@ function BattleStats({ heroHP, enemyHP, heroMaxHP, enemyMaxHP }) {
     return (
         <>
             <div className="heroBox">
-                <p>EnemyName</p>
+                <p>HeroName</p>
                 <progress className="heroBar" id="file" value={heroHP} max={heroMaxHP}></progress>
             </div>
             <div className="heroImg">
             </div>
             <div className="enemyBox">
-                <p>HeroName</p>
+                <p>EnemyName</p>
                 <progress className="enemyBar" id="file" value={enemyHP} max={enemyMaxHP} ></progress>
             </div>
             <div className="enemyImg">

@@ -1,11 +1,11 @@
 import React from 'react'
 import "./scroll.css"
 
-function scroll() {
+function scroll(props) {
     return (
 
         <div className="scroll">
-            <p className="scrollText"> This is some information about the fighter class. Fighters like to fight. </p>
+            <p className="scrollText"> {props.text}</p>
         </div>
 
     )
