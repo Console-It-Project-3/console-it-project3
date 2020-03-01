@@ -11,7 +11,6 @@ const passport = require('./passport');
 const PORT = process.env.PORT || 3001;
 const app = express();
 const apiRoutes = require("./routes/api");
-const user = require('./routes/api/user')
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -37,6 +36,7 @@ mongoose.connect(
 
 // Use apiRoutes
 app.use("/api", apiRoutes);
+
 
 // Sessions
 app.use(
