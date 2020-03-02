@@ -47,7 +47,7 @@ class Signup extends Component {
                     // 	redirectTo: ' /login'
                     // })
                 } else {
-                    console.log('username already taken')
+                    console.log('repeating data, check error')
                 }
             }).catch(error => {
                 console.log('signup error: ')
