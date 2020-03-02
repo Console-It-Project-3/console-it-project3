@@ -1,25 +1,24 @@
 {
-<<<<<<< HEAD
-  "name": "client",
-  "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.4.1",
-    "@testing-library/user-event": "^7.2.1",
-    "bootstrap": "^4.4.1",
-    "react": "^16.12.0",
-    "react-bootstrap": "^0.32.4",
-    "react-dom": "^16.12.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.0"
-  },
-=======
   "name": "mern",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
->>>>>>> master
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.1",
+    "@testing-library/user-event": "^7.2.1",
+    "connect-mongo": "^3.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.9.2",
+    "morgan": "^1.9.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.0"
+  },
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
@@ -35,20 +34,5 @@
   "devDependencies": {
     "concurrently": "^4.1.2",
     "nodemon": "^1.18.7"
-  },
-  "dependencies": {
-    "axios": "^0.19.2",
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
-    "connect-mongo": "^3.2.0",
-    "express": "^4.16.3",
-    "express-session": "^1.17.0",
-    "if-env": "^1.0.4",
-    "mongoose": "^5.8.11",
-    "morgan": "^1.9.1",
-    "passport": "^0.4.1",
-    "passport-local": "^1.0.0",
-    "path": "^0.12.7",
-    "spectre.css": "^0.5.8"
   }
 }
