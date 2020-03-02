@@ -12,14 +12,14 @@ class Signup extends Component {
                         <div className="form-row">
                             <div className="col-md-4 mb-3">
                                  <label for="validationCustom01">First name: </label>
-                                <input type="text" className="form-control" placeholder="Enter your first name" required />
+                                <input type="text" className="form-control" placeholder="Enter first name" required />
                                 <div className="valid-feedback">
                                     Looks good!
                                 </div>
                             </div>
                             <div className="col-md-4 mb-3">
                                 <label for="validationCustom02">Last name: </label>
-                                <input type="text" className="form-control" placeholder="Enter your last name" required />
+                                <input type="text" className="form-control" placeholder="Enter last name" required />
 
                                 <div className="valid-feedback">
                                     Looks good!
@@ -58,7 +58,8 @@ class Signup extends Component {
                                  </div>
                             </div>
                         </div>
-                        <button className="btn btn-primary" type="submit">Sign Up</button>
+                        <button className="btn btn-primary" type="submit"><a href="/character">Sign Up</a></button>
+                        <button className="btn btn-primary" type="submit"><a href="/login">Log In</a></button>
                     </form>
                 </div>
             </div>
