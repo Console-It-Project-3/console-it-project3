@@ -1,19 +1,16 @@
 import React from 'react'
 import './moveText.css'
-// import StoryText from "./text";
 
-function text() {
+function text({ story, choiceBtn1, choiceBtn2 }) {
     return (
 
         <div className="all">
             <div className="text">
-                <p className="pText">    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ut magnam et nesciunt quasi esse accusamus fugiat ea. Provident cumque delectus id laborum amet reiciendis, commodi illo ratione quae aperiam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sit facilis a sapiente reprehenderit, officiis commodi doloribus laboriosam quaerat, provident earum harum in ratione excepturi rem recusandae at dolorum autem. </p>
+                <p className="pText"> {story.text} </p>
             </div>
             <div className="buttons">
-                <button className="button1">Inventory</button>
-                <button className="button2">Button2</button>
-                <button className="button3">Button3</button>
-                <button className="button4">Button4</button>
+                <button onClick={() => { choiceBtn1(story.options[0].storyId) }} className="button1">{story.options[0].text}</button>
+                <button onClick={() => { choiceBtn1(story.options[1].storyId) }} className="button2">{story.options[1].text}</button>2
             </div>
 
         </div>

@@ -6,10 +6,6 @@ import characters from "./character.json"
 
 
 
-
-
-
-
 class Character extends Component {
 
     state = {
@@ -28,7 +24,7 @@ class Character extends Component {
 
     handleButtonChoose = () => {
         console.log("clicked this is current hero Index!!!", this.state.heroIndex);
-        window.location.href = "movement"
+        window.location.href = "story"
         // const char = document.getElementsByClassName("active").value()
         // console.log(char);
 

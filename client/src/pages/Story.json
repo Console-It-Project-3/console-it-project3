@@ -1,0 +1,58 @@
+[
+    {
+        "story_ID": 0,
+        "text": "You wake up in your bed to loud noises. You smell smoke and hear screaming. Looking our your window, you can see the town is under attack.",
+        "options": [
+            {
+                "text": "Rush outside to help!",
+                "storyId": 1
+            },
+            {
+                "text": "Hide in the home and wait out the attack",
+                "storyId": 2
+            }
+        ]
+    },
+    {
+        "story_ID": 1,
+        "text": "You rush outside to witness carnage, fire all around, your village being destroyed by orcs and other monsters.",
+        "options": [
+            {
+                "text": "Fight!",
+                "storyId": "to battle"
+            },
+            {
+                "text": "Hide in the home and wait out the attack",
+                "storyId": 2
+            }
+        ]
+    },
+    {
+        "story_ID": 2,
+        "text": "You hide in your house, the sounds of fighting ringing around you, the ringing of swords",
+        "options": [
+            {
+                "text": "Rush outside to help",
+                "storyId": 1
+            },
+            {
+                "text": "Hide for longer, it's scary out there.",
+                "storyId": 3
+            }
+        ]
+    },
+    {
+        "story_ID": 3,
+        "text": "You hide in your house, the sounds of fighting ringing around you, the ringing of swords. You hear them kick down the door. They have entered your house, ready for battle",
+        "options": [
+            {
+                "text": "Fight!",
+                "storyId": "to battle"
+            },
+            {
+                "text": "Cower",
+                "storyId": "to battle"
+            }
+        ]
+    }
+]
