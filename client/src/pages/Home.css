@@ -10,7 +10,7 @@ button:focus {
     margin-top:15%;
     max-width: 475px;
     background: rgba(220,220,220, 0.875);
-
+    font-family: Papyrus;
 }
 .btn btn-primary btn-lg justify-content-end{
     margin: auto;
