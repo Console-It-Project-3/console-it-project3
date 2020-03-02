@@ -1,6 +1,59 @@
 import React, { Component } from "react";
 import "../pages/Home.css"
+import API from "../utils/api";
+// add login feature
+
+
 class Home extends Component {
+
+    state = {
+        characterData: [],
+        enemiesData: [],
+        equipmentData: [],
+        foodData: [],
+        potionData: [],
+        RandomData: [],
+        storyData: []
+    }
+
+    // need to mount everything we are going to need to play the game,
+    // need to mount all the characters for the spesific user
+    // need to mount all of the equipment
+    // need to mount all of the enemies
+    // need to mount all of the food
+    // need to mount all of the story
+    // need to mount the random events
+    componentDidMount() {
+        API.getCharacters().then(data => {
+            console.log("hit api one", data.data);
+            this.setState({ characterData: data.data })
+        })
+        API.getEnemies({}).then(data => {
+            console.log("hit api two", data.data);
+            this.setState({ enemiesData: data.data })
+        })
+        API.getEquipment({}).then(data => {
+            console.log("hit api three", data.data);
+            this.setState({ equipmentData: data.data })
+        })
+        API.getFood({}).then(data => {
+            console.log("hit api four", data.data);
+            this.setState({ foodData: data.data })
+        })
+        API.getPotion({}).then(data => {
+            console.log("hit api five", data.data);
+            this.setState({ potionData: data.data })
+        })
+        API.getRandom({}).then(data => {
+            console.log("hit api six", data.data);
+            this.setState({ RandomData: data.data })
+        })
+        API.getStory({}).then(data => {
+            console.log("hit api seven", data.data);
+            this.setState({ storyData: data.data })
+        })
+    }
+
     render() {
         return (
             <div>
