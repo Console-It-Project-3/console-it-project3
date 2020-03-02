@@ -7,6 +7,8 @@ import BattleStats from "../components/BattleStats";
 import Run from "../components/Run"
 import MoveText from "../components/moveText"
 import createEnemies from '../utils/createEnemies.js';
+import Story from "./Story.json";
+
 
 
 function handleButton3() {
@@ -14,17 +16,13 @@ function handleButton3() {
 
 }
 
-
-
-
-
 class Battle extends Component {
 
     state = {
         heroHP: 100,
         heroAttack: 20,
         heroMaxHP: 100,
-        battleDialogue: "You encountered a rogue knight! What would you like to do? ",
+        battleDialogue: "An enemy wants to fight! What would you like to do? ",
         currentlyInBattle: true,
         faded: true,
         inventory: [
@@ -37,23 +35,11 @@ class Battle extends Component {
         runDia: "",
         runSuccess: false,
         runClass: "",
-        battleRender: true,
+        battleRender: false,
         score: '',
         battleCounter: 0,
-        enemyList: createEnemies()
-        // [
-        // {
-        //     enemyHP: 50, enemyAttack: 10, enemyMaxHP: 50, enemySrc: "https://i.imgur.com/AcfglfP.png"
-        // },
-        // {
-        //     enemyHP: 60, enemyAttack: 7, enemyMaxHP: 60, enemySrc: "https://i.imgur.com/AhBAU2S.png"
-        // },
-        // {
-        //     enemyHP: 55, enemyAttack: 12, enemyMaxHP: 55, enemySrc: "https://i.imgur.com/AMTxanU.png"
-        // }
-        // ]
-
-
+        enemyList: createEnemies(),
+        storyID: 0
     }
 
     handleButtonInventory = () => {
@@ -159,6 +145,22 @@ class Battle extends Component {
         // }
     }
 
+    choiceBtn1 = (num) => {
+
+        if (num == "to battle") {
+            this.setState({
+                battleRender: true
+            })
+        } else {
+
+            this.setState({
+                storyID: num
+            })
+        }
+    }
+
+
+
     render() {
 
         console.log('this is our state', this.state)
@@ -178,7 +180,7 @@ class Battle extends Component {
                 ) : (
                         <div>
                             <Moving />
-                            <MoveText />
+                            <MoveText choiceBtn1={this.choiceBtn1} story={Story[this.state.storyID]} />
                         </div>
                     )}
             </div>
