@@ -12,7 +12,7 @@ class Signup extends Component {
             password: '',
             firstname: '',
             lastname: '',
-            email:'',
+            email: '',
             confirmPassword: '',
             redirectTo: null
 
@@ -42,7 +42,7 @@ class Signup extends Component {
                 console.log(response)
                 if (!response.data.errmsg) {
                     console.log('successful signup')
-                    this.props.history.push('/login');
+                    this.props.history.push('/home');
                     // this.setState({ //redirect to login page
                     // 	redirectTo: ' /login'
                     // })
