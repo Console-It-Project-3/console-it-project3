@@ -6,7 +6,7 @@ const passport = require('../../passport')
 router.post('/', (req, res) => {
     console.log('user signup...........');
     console.log(req.body);
-    
+
 
     // const { username, password } = req.body
     const firstname = req.body.firstname;
@@ -27,7 +27,7 @@ router.post('/', (req, res) => {
         }
         else {
             console.log("new user");
-            
+
             const newUser = new User({
                 username: username,
                 password: password,
