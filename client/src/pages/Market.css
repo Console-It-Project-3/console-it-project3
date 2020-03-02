@@ -36,12 +36,14 @@
 .mBtn3,
 .mBtn4{
     border-radius: 15px;
-    background: green;
-    border: black;
+    background: #5a3c1c;
+    color: bisque;
+    border: black solid 1px;
     padding: 10px 15px;
     width:150px;
     font-size: 25px;
     position: absolute;
+    box-shadow: 0 9px #999;
 }
 .mBtn1{
     position: absolute;
@@ -70,7 +72,8 @@
 .buyBtn, .sellBtn{
     height: 30px;
     vertical-align: center;
-    background: green;
+    background: #5a3c1c;
+    color: bisque;
     border: none;
     border-radius: 10px;
     margin-right: 10px;

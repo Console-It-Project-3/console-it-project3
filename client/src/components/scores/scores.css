@@ -34,7 +34,8 @@
     top: 575px;
     left: 125px;
     max-width: 150px;
-    background: green;
+    background: #5a3c1c;
+    color: bisque;
     border: none;
     border-radius: 10px;
 }

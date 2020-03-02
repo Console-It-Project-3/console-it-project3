@@ -38,7 +38,8 @@
 .battleButton3,
 .battleButton4{
     border-radius: 15px;
-    background: green;
+    background: #5a3c1c;
+    color: bisque;
     border: black;
     padding: 10px 15px;
     width:150px;

@@ -66,9 +66,9 @@ class Character extends Component {
                                     <img class="d-block h-100" src="https://i.imgur.com/huVIPkL.png" alt="Warrior" />
                                     <div className="testText"> 1This is test 1</div>
                                 </div>
-                                {/* <div class="carousel-item">
+                                <div class="carousel-item">
                                     <img class="d-block h-100" src={this.state.curCharacter} alt="Archer" />
-                                </div> */}
+                                </div>
                                 <div class="carousel-item">
                                     <img class="d-block h-100" src="https://i.imgur.com/bKvuY6T.png" alt="Warrior" />
                                     <div className="testText"> 2This is test 2</div>
