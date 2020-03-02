@@ -87,7 +87,7 @@ class Signup extends Component {
                     <form className="needs-validation" noValidate>
                         <div className="form-row">
                             <div className="col-md-4 mb-3">
-                                <label for="validationCustom01">First name: </label>
+                                <label htmlFor="validationCustom01">First name: </label>
                                 <input type="text"
                                     id="firstname"
                                     name="firstname"
@@ -99,7 +99,7 @@ class Signup extends Component {
                                 </div>
                             </div>
                             <div className="col-md-4 mb-3">
-                                <label for="validationCustom02">Last name: </label>
+                                <label htmlFor="validationCustom02">Last name: </label>
                                 <input type="text"
                                     id="lastname"
                                     name="lastname"
@@ -112,7 +112,7 @@ class Signup extends Component {
                                 </div>
                             </div>
                             <div className="col-md-4 mb-3">
-                                <label for="validationCustomUsername">Username: </label>
+                                <label htmlFor="validationCustomUsername">Username: </label>
                                 <div className="input-group">
                                     <input type="text" className="form-control"
                                         id="username"
@@ -127,7 +127,7 @@ class Signup extends Component {
                             </div>
                         </div>
                         <div className="form-group row">
-                            <label for="inputEmail3" className="col-sm-2 col-form-label">Email: </label>
+                            <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Email: </label>
                             <div className="col-sm-10">
                                 <input type="email"
                                     id="email"
@@ -138,7 +138,7 @@ class Signup extends Component {
                             </div>
                         </div>
                         <div className="form-group row">
-                            <label for="inputPassword3" className="col-sm-2 col-form-label">Password: </label>
+                            <label htmlFor="inputPassword3" className="col-sm-2 col-form-label">Password: </label>
                             <div className="col-sm-10">
                                 <input type="password"
                                     id="password"
@@ -148,11 +148,11 @@ class Signup extends Component {
                                     className="form-control" id="inputPassword3" required />
                                 <div className="invalid-feedback">
                                     Passwords do not match.
-                                     </div>
+                                </div>
                             </div>
                         </div>
                         <div className="form-group row">
-                            <label for="inputPassword3" className="col-sm-2 col-form-label">Confirm Password: </label>
+                            <label htmlFor="inputPassword3" className="col-sm-2 col-form-label">Confirm Password: </label>
                             <div className="col-sm-10">
                                 <input type="password"
                                     id="confirmPassword"
@@ -162,13 +162,13 @@ class Signup extends Component {
                                     className="form-control" id="inputPassword3" required />
                                 <div className="invalid-feedback">
                                     Passwords do not match.
-                                     </div>
+                                </div>
                             </div>
                         </div>
                         <div className="form-group">
                             <div className="form-check">
                                 <input className="form-check-input" type="checkbox" value="" required />
-                                <label className="form-check-label" for="invalidCheck">
+                                <label className="form-check-label" htmlFor="invalidCheck">
                                     Agree to terms and conditions
                                 </label>
                                 <div className="invalid-feedback">
@@ -177,23 +177,23 @@ class Signup extends Component {
                             </div>
                         </div>
                         <button className="btn btn-primary" onClick={this.handleSubmit} type="submit">Sign Up</button>
-                        <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle">Log In<span class="caret"></span></button>
+                        <button type="button" id="dropdownMenu1" data-toggle="dropdown" className="btn btn-outline-secondary dropdown-toggle">Log In<span className="caret"></span></button>
                         <ul className="dropdown-menu dropdown-menu-right mt-2">
                             <li className="px-3 py-2">
-                                <form className="form" role="form">
+                                <div className="form" role="form">
                                     <div className="form-group">
-                                        <input id="emailInput" placeholder="Email" class="form-control form-control-sm" type="text" required="" />
+                                        <input id="emailInput" placeholder="Email" className="form-control form-control-sm" type="text" required="" />
                                     </div>
                                     <div className="form-group">
-                                        <input id="passwordInput" placeholder="Password" class="form-control form-control-sm" type="text" required="" />
+                                        <input id="passwordInput" placeholder="Password" className="form-control form-control-sm" type="text" required="" />
                                     </div>
                                     <div className="form-group">
-                                        <button type="submit" class="btn btn-dark btn-block">Login</button>
+                                        <button type="submit" className="btn btn-dark btn-block">Login</button>
                                     </div>
                                     <div className="form-group text-center">
                                         <small><a href="#" data-toggle="modal" data-target="#modalPassword">Forgot password?</a></small>
                                     </div>
-                                </form>
+                                </div>
                             </li>
                         </ul>
                     </form>
