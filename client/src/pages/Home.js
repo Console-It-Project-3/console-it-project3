@@ -1,22 +1,26 @@
 import React, { Component } from "react";
 import "../pages/Home.css"
 import API from "../utils/api";
-import Axios from "axios";
+import axios from "axios";
 // add login feature
 
 
 class Home extends Component {
-
-    state = {
-        characterData: [],
-        enemiesData: [],
-        equipmentData: [],
-        foodData: [],
-        potionData: [],
-        RandomData: [],
-        storyData: [],
-        userEmail: '',
-        userPassword: ''
+    constructor() {
+        super()
+        this.state = {
+            characterData: [],
+            enemiesData: [],
+            equipmentData: [],
+            foodData: [],
+            potionData: [],
+            RandomData: [],
+            storyData: [],
+            email: '',
+            password: ''
+        }
+        this.tryLogin = this.tryLogin.bind(this)
+        this.handleChange = this.handleChange.bind(this)
     }
 
     // need to mount everything we are going to need to play the game,
@@ -27,55 +31,56 @@ class Home extends Component {
     // need to mount all of the story
     // need to mount the random events
     componentDidMount() {
+        // API.getUser().then(data => {
+        //     console.log("hit api zero", data);
+        //     this.setState({ email: data.data })
+        // })
         API.getCharacters().then(data => {
-            console.log("hit api one", data.data);
+            // console.log("hit api one", data.data);
             this.setState({ characterData: data.data })
         })
         API.getEnemies({}).then(data => {
-            console.log("hit api two", data.data);
+            // console.log("hit api two", data.data);
             this.setState({ enemiesData: data.data })
         })
         API.getEquipment({}).then(data => {
-            console.log("hit api three", data.data);
+            // console.log("hit api three", data.data);
             this.setState({ equipmentData: data.data })
         })
         API.getFood({}).then(data => {
-            console.log("hit api four", data.data);
+            // console.log("hit api four", data.data);
             this.setState({ foodData: data.data })
         })
         API.getPotion({}).then(data => {
-            console.log("hit api five", data.data);
+            // console.log("hit api five", data.data);
             this.setState({ potionData: data.data })
         })
         API.getRandom({}).then(data => {
-            console.log("hit api six", data.data);
+            // console.log("hit api six", data.data);
             this.setState({ RandomData: data.data })
         })
         API.getStory({}).then(data => {
-            console.log("hit api seven", data.data);
+            // console.log("hit api seven", data.data);
             this.setState({ storyData: data.data })
         })
     }
 
-    handleChange = (event) => {
+    handleChange(event) {
         console.log("typing");
         this.setState({
             [event.target.name]: event.target.value
         })
     }
-    tryLogin = (e) => {
-        e.preventDefault();
+    tryLogin(event){
+        event.preventDefault();
         console.log("clicking");
         var obj = {
-            email: this.state.userEmail,
-            password: this.state.userPassword
+            email: this.state.email,
+            password: this.state.password
         }
         console.log(obj)
-        Axios
-            .post('/api/user/login', {
-                email: this.state.userEmail,
-                password: this.state.userPassword
-            })
+        axios
+            .post('/api/user/login', obj)
             .then(response => {
                 console.log('login response: ')
                 console.log(response)
@@ -88,8 +93,10 @@ class Home extends Component {
                     })
                     // update the state to redirect to home
                     this.setState({
-                        redirectTo: '/'
+                        redirectTo: '/character'
                     })
+                }else {
+                    console.log('error')
                 }
             }).catch(error => {
                 console.log('login error: ')
@@ -101,36 +108,47 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
-                    <div class="container">
-                        <a class="navbar-brand" href="/home">KnightFall</a>
-                        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
+                    <div className="container">
+                        <a className="navbar-brand" href="/home">KnightFall</a>
+                        <button className="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
                             &#9776;
                         </button>
-                        <div class="collapse navbar-collapse" id="exCollapsingNavbar">
-                            <ul class="nav navbar-nav">
-                                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                        <div className="collapse navbar-collapse" id="exCollapsingNavbar">
+                            <ul className="nav navbar-nav">
+                                <li className="nav-item"><a href="/" className="nav-link">Home</a></li>
                             </ul>
-                            <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
-                            {/* <li class="nav-item order-2 order-md-1"><a href="/signup" class="nav-link" title="settings"><i class="fa fa-cog fa-fw fa-lg"></i></a></li> */}
-                                <li class="dropdown order-1">
-                                    <button type="button" id="sign-up-btn" class="btn btn-outline-secondary" ><a href="/signup" class="nav-link">Sign Up</a><span class="caret"></span></button>
+                            <ul className="nav navbar-nav flex-row justify-content-between ml-auto">
+                            {/* <li className="nav-item order-2 order-md-1"><a href="/signup" clclassNameass="nav-link" title="settings"><i className="fa fa-cog fa-fw fa-lg"></i></a></li> */}
+                                <li className="dropdown order-1">
+                                    <button type="button" id="sign-up-btn" className="btn btn-outline-secondary" ><a href="/signup" className="nav-link">Sign Up</a><span className="caret"></span></button>
                                 </li>
-                                <li class="dropdown order-1">
-                                    <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle">Login <span class="caret"></span></button>
-                                    <ul class="dropdown-menu dropdown-menu-right mt-2">
-                                        <li class="px-3 py-2">
-                                            <form class="form" role="form">
-                                                <div class="form-group">
-                                                    <input id="emailInput" placeholder="Email" class="form-control form-control-sm" type="text" required="" />
+                                <li className="dropdown order-1">
+                                    <button type="button" id="dropdownMenu1" data-toggle="dropdown" className="btn btn-outline-secondary dropdown-toggle">Login <span className="caret"></span></button>
+                                    <ul className="dropdown-menu dropdown-menu-right mt-2">
+                                        <li className="px-3 py-2">
+                                            <form className="form" role="form">
+                                                <div className="form-group">
+                                                    <input 
+                                                    id="emailInput" 
+                                                    name="email" 
+                                                    value={this.state.email}
+                                                    onChange={this.handleChange} placeholder="Email" className="form-control form-control-sm" 
+                                                    type="text" 
+                                                    required="" />
                                                 </div>
-                                                <div class="form-group">
-                                                    <input id="passwordInput" placeholder="Password" class="form-control form-control-sm" type="text" required="" />
+                                                <div className="form-group">
+                                                    <input 
+                                                    id="passwordInput" name="password" 
+                                                    value={this.state.password}
+                                                    onChange={this.handleChange}placeholder="Password" className="form-control form-control-sm" 
+                                                    type="text" 
+                                                    required="" />
                                                 </div>
-                                                <div class="form-group">
-                                                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                                                <div className="form-group">
+                                                    <button type="submit" onClick={this.tryLogin}className="btn btn-primary btn-block">Login</button>
                                                 </div>
-                                                <div class="form-group text-center">
+                                                <div className="form-group text-center">
                                                     <small><a href="#" data-toggle="modal" data-target="#modalPassword">Forgot password?</a></small>
                                                 </div>
                                             </form>

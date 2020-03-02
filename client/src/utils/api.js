@@ -11,8 +11,11 @@ import axios from "axios";
 
 const API = {
     // Gets all posts
+    // getUser: function (id) {
+    //     console.log(id);
+    //     return axios.get("http://localhost:3001/api/user/" + id);
+    // },
     getCharacters: function () {
-
         return axios.get("http://localhost:3001/api/character/all");
     },
     getEnemies: function (id) {
