@@ -25,38 +25,40 @@
     background-size: 100% 100%;
     height: 365px;
 }
-.buttons{
-    position: relative;
-    /* position: absolute; */
+.battleButtons{
+    /* position: relative; */
+    position: absolute;
     /* right: 100px; */
     bottom: 40px;
+    right: 20px;
 
 }
-.button1,
-.button2,
-.button3,
-.button4{
+.battleButton1,
+.battleButton2,
+.battleButton3,
+.battleButton4{
     border-radius: 15px;
-    background: green;
+    background: #5a3c1c;
+    color: bisque;
     border: black;
     padding: 10px 15px;
     width:150px;
     font-size: 25px;
     position: absolute;
 }
-.button1{
-    right: 500px;
+.battleButton1{
+    right: 250px;
     bottom: 200px;
 }
-.button2{
-    right: 300px;
+.battleButton2{
+    right: 50px;
     bottom: 200px;
 }
-.button3{
-    right: 500px;
+.battleButton3{
+    right: 250px;
     bottom: 100px;
 }
-.button4{
-    right: 300px;
+.battleButton4{
+    right: 50px;
     bottom: 100px;
 }

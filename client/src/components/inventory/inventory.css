@@ -21,7 +21,8 @@
     font-weight: bold;
 }
 .itemBtn, .closeBtn{
-    background: green;
+    background: #5a3c1c;
+    color: bisque;
     border: none;
     border-radius: 10px;
 }

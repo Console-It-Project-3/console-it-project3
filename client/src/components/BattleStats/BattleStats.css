@@ -48,21 +48,21 @@
 }
 
 .heroImg{
-    background: url("https://i.imgur.com/rTBF6o0.png");
-    height: 250px;
-    width: 400px;
+    background: url("https://i.imgur.com/7rWOaEN.png");
+    height: 35%;
+    width: 23%;
     background-size: 100% 100%;
     position: absolute;
     top: 100px;
-    left: 1%;
+    right: 50px;
 }
 
 .enemyImg{
-    background: url("https://i.imgur.com/Pil4b8W.png");
-    height: 350px;
-    width: 400px;
+    background: url("https://i.imgur.com/pEq6zKc.png");
+    height: 35%;
+    width: 28%;
     background-size: 100% 100%;
     position: absolute;
-    top: 50px;
-    right: 30px;
+    top: 100px;
+    left: 50px;
 }
