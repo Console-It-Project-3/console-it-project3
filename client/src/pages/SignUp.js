@@ -46,11 +46,11 @@ class Signup extends Component {
         // // if(this.state.password = null){
         // //     alert("password is needed")
         // // }
-        const {password, confirmPassword} = this.state;
-        if (password !== confirmPassword){
+        const { password, confirmPassword } = this.state;
+        if (password !== confirmPassword) {
             alert("passwords don't match");
             window.location.reload(false);
-        }else{
+        } else {
         }
         event.preventDefault()
 
@@ -145,9 +145,9 @@ class Signup extends Component {
                                     name="password"
                                     value={this.state.password}
                                     onChange={this.handleChange}
-                                    className="form-control" id="inputPassword3" required/>
-                                    <div className="invalid-feedback">
-                                        Passwords do not match.
+                                    className="form-control" id="inputPassword3" required />
+                                <div className="invalid-feedback">
+                                    Passwords do not match.
                                      </div>
                             </div>
                         </div>
@@ -159,9 +159,9 @@ class Signup extends Component {
                                     name="confirmPassword"
                                     value={this.state.confirmPassword}
                                     onChange={this.handleChange}
-                                    className="form-control" id="inputPassword3" required/>
-                                    <div className="invalid-feedback">
-                                        Passwords do not match.
+                                    className="form-control" id="inputPassword3" required />
+                                <div className="invalid-feedback">
+                                    Passwords do not match.
                                      </div>
                             </div>
                         </div>
@@ -177,9 +177,29 @@ class Signup extends Component {
                             </div>
                         </div>
                         <button className="btn btn-primary" onClick={this.handleSubmit} type="submit">Sign Up</button>
+                        <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle">Log In<span class="caret"></span></button>
+                        <ul className="dropdown-menu dropdown-menu-right mt-2">
+                            <li className="px-3 py-2">
+                                <form className="form" role="form">
+                                    <div className="form-group">
+                                        <input id="emailInput" placeholder="Email" class="form-control form-control-sm" type="text" required="" />
+                                    </div>
+                                    <div className="form-group">
+                                        <input id="passwordInput" placeholder="Password" class="form-control form-control-sm" type="text" required="" />
+                                    </div>
+                                    <div className="form-group">
+                                        <button type="submit" class="btn btn-dark btn-block">Login</button>
+                                    </div>
+                                    <div className="form-group text-center">
+                                        <small><a href="#" data-toggle="modal" data-target="#modalPassword">Forgot password?</a></small>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
                     </form>
                 </div>
             </div>
+                
         )
     }
 }
