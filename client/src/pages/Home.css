@@ -7,7 +7,7 @@ button:focus {
 }
 .jumbotron{
     margin:auto;
-    margin-top:15%;
+    margin-top:10%;
     max-width: 475px;
     background: rgba(220,220,220, 0.875);
     font-family: Papyrus;

@@ -28,6 +28,30 @@ class Signup extends Component {
     handleSubmit(event) {
         console.log('sign-up handleSubmit, username: ')
         console.log(this.state.username)
+        // if(this.state.value.length <8){
+        //     alert("password is too short")
+        // }
+        // if(this.state.username = null){
+        //     alert("username is needed")
+        // }
+        // if(this.state.firstname = null){
+        //     alert("First name needed")
+        // }
+        // if(this.state.lastname = null){
+        //     alert("Last name needed")
+        // }
+        // if(this.state.email = null){
+        //     alert("email is needed")
+        // }
+        // // if(this.state.password = null){
+        // //     alert("password is needed")
+        // // }
+        const {password, confirmPassword} = this.state;
+        if (password !== confirmPassword){
+            alert("passwords don't match");
+            window.location.reload(false);
+        }else{
+        }
         event.preventDefault()
 
         //request to server to add a new username/password
@@ -42,7 +66,7 @@ class Signup extends Component {
                 console.log(response)
                 if (!response.data.errmsg) {
                     console.log('successful signup')
-                    this.props.history.push('/home');
+                    this.props.history.push('/character');
                     // this.setState({ //redirect to login page
                     // 	redirectTo: ' /login'
                     // })
@@ -69,7 +93,7 @@ class Signup extends Component {
                                     name="firstname"
                                     value={this.state.firstname}
                                     onChange={this.handleChange}
-                                    className="form-control" placeholder="Enter your first name" required />
+                                    className="form-control" placeholder="Enter first name" required />
                                 <div className="valid-feedback">
                                     Looks good!
                                 </div>
@@ -81,7 +105,7 @@ class Signup extends Component {
                                     name="lastname"
                                     value={this.state.lastname}
                                     onChange={this.handleChange}
-                                    className="form-control" placeholder="Enter your last name" required />
+                                    className="form-control" placeholder="Enter last name" required />
 
                                 <div className="valid-feedback">
                                     Looks good!
@@ -121,7 +145,24 @@ class Signup extends Component {
                                     name="password"
                                     value={this.state.password}
                                     onChange={this.handleChange}
-                                    className="form-control" id="inputPassword3" />
+                                    className="form-control" id="inputPassword3" required/>
+                                    <div className="invalid-feedback">
+                                        Passwords do not match.
+                                     </div>
+                            </div>
+                        </div>
+                        <div className="form-group row">
+                            <label for="inputPassword3" className="col-sm-2 col-form-label">Confirm Password: </label>
+                            <div className="col-sm-10">
+                                <input type="password"
+                                    id="confirmPassword"
+                                    name="confirmPassword"
+                                    value={this.state.confirmPassword}
+                                    onChange={this.handleChange}
+                                    className="form-control" id="inputPassword3" required/>
+                                    <div className="invalid-feedback">
+                                        Passwords do not match.
+                                     </div>
                             </div>
                         </div>
                         <div className="form-group">
