@@ -1,15 +1,22 @@
 .charContain{
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 
 .choose{
-    position: absolute;
+    /* position: absolute;
     top: 600px;
-    left: 275px;
-    background: green;
-    border: 2px solid;
-    box-shadow: 0 0 15px black;
+    left: 275px; */
+    /* margin: auto; */
+    margin-left: 42% ;
+    margin-top: 20px;
+    justify-content: center;
+    height: 50px;
+    background: #5a3c1c;
+    color: bisque;
+    border: 1px black solid;
     width: 200px;
     padding: 10px;
     font-weight: bold;
@@ -18,19 +25,10 @@
 }
 .sprite{
     /* padding-left: 100px; */
-     position: absolute;
-     
-     left: 85px;
-     max-height: 200px;
-     min-height: 200px;
+    margin: auto;
+     max-height: 550px;
+     min-height: 550px;
      z-index: 3;
     
  }
 
- .testText{
-     position: absolute;
-     right: -40px;
-     top: 300px;
-     z-index: 3;
-     color: white;
- }

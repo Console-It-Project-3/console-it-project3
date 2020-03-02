@@ -1,8 +1,7 @@
 import React from 'react';
 import Home from "./pages/Home";
 import Character from "./pages/Character";
-import Movement from "./pages/Movement";
-import Battle from "./pages/Battle";
+import Story from "./pages/Story";
 import Market from "./pages/Market"
 import GameOver from "./pages/GameOver";
 import Highscore from "./pages/Highscore";
@@ -23,8 +22,7 @@ function App() {
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/character" component={Character} />
-          <Route exact path="/movement" component={Movement} />
-          <Route exact path="/battle" component={Battle} />
+          <Route exact path="/story" component={Story} />
           <Route exact path="/market" component={Market} />
           <Route exact path="/highscore" component={Highscore} />
           <Route exact path="/gameover" component={GameOver} />
