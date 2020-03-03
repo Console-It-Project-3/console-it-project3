@@ -16,8 +16,8 @@ function battleText({ handleButtonFight, handleButtonInventory, handleButtonQuit
             <div className="battleButtons">
                 <button onClick={handleButtonFight} className="battleButton1">Fight</button>
                 <button onClick={handleButtonInventory} className="battleButton2">Inventory</button>
-                <button onClick={handleButtonRun} className="battleButton4">Run</button>
-                <button onClick={handleButtonQuit} className="battleButton3">Quit</button>
+                <button onClick={handleButtonRun} className="battleButton3">Run</button>
+                <button onClick={handleButtonQuit} className="battleButton4">Quit</button>
             </div>
 
         </div>

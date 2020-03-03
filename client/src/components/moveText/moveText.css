@@ -5,15 +5,22 @@
     font-size: 20px;
     font-weight: bold;
     text-align: justify;
+    /* overflow: scroll; */
 }
 .all{
     display: flex;
     background: url("https://i.imgur.com/Elkm6r4.png");
     background-size: 100% 100%;
-    height: 400px;
+    height: 100vh;
+}
+.storySprite{
+    max-height: 250px;
+    position: absolute;
+    right: 10%;
+    top: 80px;
 }
 
-.buttons{
+.storyButtons{
     position: relative;
     /* position: absolute; */
     left: 550px;
@@ -21,9 +28,8 @@
 
 }
 .button1,
-.button2,
-.button3,
-.button4{
+.button2
+{
     border-radius: 15px;
     background: #5a3c1c;
     color: bisque;
@@ -34,18 +40,66 @@
     position: absolute;
 }
 .button1{
-    left: -500px;
+    /* left: -500px; */
+    right: 300px;
     bottom: 200px;
 }
 .button2{
-    left: -300px;
+    /* left: -300px; */
+    right: 100px;
     bottom: 200px;
 }
-.button3{
-    left: -500px;
-    bottom: 100px;
+
+
+@media only screen and (max-width: 1200px){
+    .storyButtons{
+        left:475px;
+    }  
 }
-.button4{
-    left: -300px;
-    bottom: 100px;
+@media only screen and (max-width: 1050px){
+    .pText{
+        max-width: 80vw;
+        padding-left: 20%;
+    }
+    .storyButtons{
+        left:50px;
+        position: relative;
+    }  
+    .storySprite{
+        display: none;
+    }
+
+}
+@media only screen and (max-width: 600px){
+    .button1{
+        right: 250px;
+        bottom: 200px;
+    }
+    .button2{
+        right: 50px;
+        bottom: 200px;
+    }
+    
+}
+@media only screen and (max-width: 500px){
+    .button1{
+        right: 210px;
+        bottom: 200px;
+    }
+    .button2{
+        right: 50px;
+        bottom: 200px;
+    }
+    
+}
+@media only screen and (max-width: 450px){
+    .button1{
+        right: 170px;
+        bottom: 150px;
+    }
+    .button2{
+        right: 10px;
+        bottom: 150px;
+    }
+    
 }

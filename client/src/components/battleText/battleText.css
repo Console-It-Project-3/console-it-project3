@@ -1,6 +1,6 @@
 .battleDialogue{
-    max-width: 55vw;
-    padding: 100px 0 0 175px;
+    /* max-width: 55vw; */
+    padding: 100px 0 0 20%;
     color:black;
     font-size: 20px;
     font-weight: bold;
@@ -48,17 +48,130 @@
 }
 .battleButton1{
     right: 250px;
-    bottom: 200px;
+    bottom: 110px;
 }
 .battleButton2{
     right: 50px;
-    bottom: 200px;
+    bottom: 110px;
 }
 .battleButton3{
     right: 250px;
-    bottom: 100px;
+    bottom: 30px;
 }
 .battleButton4{
     right: 50px;
-    bottom: 100px;
+    bottom: 30px;
 }
+
+@media only screen and (max-width: 1000px){
+    .battleDialogue{
+        width: 450px;
+    }
+}
+@media only screen and (max-width: 875px){
+    .battleDialogue{
+        width: 400px;
+    }
+    .battleButton1{
+        right: 210px;
+    }
+    .battleButton3{
+        right: 210px;
+    }
+}
+@media only screen and (max-width: 780px){
+    .battleDialogue{
+        padding-top: 35px;
+        margin-left: 100px;
+    } 
+    .battleButton1{
+        right: 375px;
+        bottom: 30px;
+    }
+    .battleButton2{
+        right: 200px;
+        bottom: 30px;
+    }
+    .battleButton3{
+        right: 375px;
+        bottom: -40px;
+    }
+    .battleButton4{
+        right: 200px;
+        bottom: -40px;
+    }
+
+}
+@media only screen and (max-width: 690px){
+   
+    .battleButton1{
+        right: 300px;
+    }
+    .battleButton2{
+        right: 125px;
+    }
+    .battleButton3{
+        right: 300px;
+    }
+    .battleButton4{
+        right: 125px;
+    }
+}
+@media only screen and (max-width: 580px){
+   .battleDialogue{
+       margin-left: 20px;
+   }
+
+}
+@media only screen and (max-width: 530px){
+    .battleButton1{
+        right: 250px;
+    }
+    .battleButton2{
+        right: 75px;
+    }
+    .battleButton3{
+        right: 250px;
+    }
+    .battleButton4{
+        right: 75px;
+    }
+}
+@media only screen and (max-width: 460px){
+    .battleDialogue{
+        margin-left: 0px;
+        width: 350px;
+    }
+    .battleButton1{
+        right: 200px;
+    }
+    .battleButton2{
+        right: 40px;
+    }
+    .battleButton3{
+        right: 200px;
+    }
+    .battleButton4{
+        right: 40px;
+    }
+}
+@media only screen and (max-width: 390px){
+    .battleDialogue{
+        margin-left: -10px;
+        width: 350px;
+    }
+    .battleButton1{
+        right: 160px;
+    }
+    .battleButton2{
+        right: 10px;
+    }
+    .battleButton3{
+        right: 160px;
+    }
+    .battleButton4{
+        right: 10px;
+    }
+}
+
+

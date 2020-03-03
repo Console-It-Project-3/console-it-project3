@@ -1,6 +1,6 @@
 .returnStory{
     position: absolute;
-    bottom: 125px;
+    bottom: 75px;
     left: 250px;
     padding: 7px 25px;
     background: #5a3c1c;
@@ -9,4 +9,20 @@
     border-radius: 10px;
     /* font-weight: bold; */
     font-size: 30px;
+}
+
+@media only screen and (max-width: 780px){
+    .returnStory{
+        bottom: 160px;
+    }
+}
+@media only screen and (max-width: 580px){
+    .returnStory{
+        left: 150px;
+    }
+}
+@media only screen and (max-width: 400px){
+    .returnStory{
+        left: 75px;
+    }
 }
