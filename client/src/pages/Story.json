@@ -1,58 +1,344 @@
 [
-    {
-        "story_ID": 0,
-        "text": "You wake up in your bed to loud noises. You smell smoke and hear screaming. Looking our your window, you can see the town is under attack.",
-        "options": [
-            {
-                "text": "Rush outside to help!",
-                "storyId": 1
-            },
-            {
-                "text": "Hide in the home and wait out the attack",
-                "storyId": 2
-            }
-        ]
-    },
-    {
-        "story_ID": 1,
-        "text": "You rush outside to witness carnage, fire all around, your village being destroyed by orcs and other monsters.",
-        "options": [
-            {
-                "text": "Fight!",
-                "storyId": "to battle"
-            },
-            {
-                "text": "Hide in the home and wait out the attack",
-                "storyId": 2
-            }
-        ]
-    },
-    {
-        "story_ID": 2,
-        "text": "You hide in your house, the sounds of fighting ringing around you, the ringing of swords",
-        "options": [
-            {
-                "text": "Rush outside to help",
-                "storyId": 1
-            },
-            {
-                "text": "Hide for longer, it's scary out there.",
-                "storyId": 3
-            }
-        ]
-    },
-    {
-        "story_ID": 3,
-        "text": "You hide in your house, the sounds of fighting ringing around you, the ringing of swords. You hear them kick down the door. They have entered your house, ready for battle",
-        "options": [
-            {
-                "text": "Fight!",
-                "storyId": "to battle"
-            },
-            {
-                "text": "Cower",
-                "storyId": "to battle"
-            }
-        ]
-    }
+    [
+        {
+            "story_ID": 0,
+            "text": "You wake up in your bed to loud noises from the outside.There are screams of anguish and roars of monsterous creatures coming from just outside your window. Looking out, you can see the town is under attack. An army full of nightmarish creatures, men clad in dark armour and dark wizards are tearing through your once peaceful home. This dark army carries a banner that you have only heard of in rumors whispered in the dead of night, a blood-red banner carrying a sigil of a black skull wearing a crown. You've heard rumors of such a massive army moving across the country, taking over villages and castles alike, all led by one man, the infamous Necro-Knight, Baltic Blackwood.",
+            "options": [
+                {
+                    "text": "Rush outside",
+                    "storyId": 1
+                },
+                {
+                    "text": "Hide in your home",
+                    "storyId": 2
+                }
+            ]
+        },
+        {
+            "story_ID": 1,
+            "text": "You grab your gear and head out into the fray. People are either dead or running away scared. You feel a ting of fear deep in your bones, but you know that you must do something to help turn the tide. You rush towards where the screams are loudest and are treated to a sight of the largest group of monsters and men in front of you. You ready yourself for the oncoming conflict, knowing that every second you keep these evil creatures at bay means another person is saved.",
+            "options": [
+                {
+                    "text": "Get people to safety",
+                    "storyId": 3
+                },
+                {
+                    "text": "Hide you coward",
+                    "storyId": 4
+                }
+            ]
+        },
+        {
+            "story_ID": 2,
+            "text": "You are not a fighter, but a survivor and what do survivors do, they hide. You look all around your house looking for a suitable hiding place. You tried hiding in the closet, but months and months of hordering random junk have the space completely full. Because of your lazy ways, there aren't many other sustiable places to hide, but settle for the classic hiding under the covers method. The screams are getting louder outside and getting closer to your house. Maybe you should reconsider hiding and go out there and help",
+            "options": [
+                {
+                    "text": "Rush outside to help",
+                    "storyId": 1
+                },
+                {
+                    "text": "Stay Hidden",
+                    "storyId": 4
+                }
+            ]
+        },
+        {
+            "story_ID": 3,
+            "text": "You buy as much time as you can while your neighbors manage to collect themselves and run to safety. You managed to cut down a few of the enemy, but you can hear the thunderous footsteps of many more on the way. You cannot fight all of them at once now, so the best thing to do would be to make a tactical retreat.",
+            "options": [
+                {
+                    "text": "Fight another day",
+                    "storyId": 6
+                },
+                {
+                    "text": "Hide at Home",
+                    "storyId": 5
+                }
+            ]
+        },
+        {
+            "story_ID": 4,
+            "text": "Cowards do survive sometimes, and you are not one to test fate. The roars of the army outside also give you very good reasons to stay under the covers. After what feels like hours, you hear that roaring has stopped, if only for a moment, and using this window of oppurtunity, you gather your things and make a break for the forests, hoping to put a lot of distance between you and that army.",
+            "options": [
+                {
+                    "text": "Head to the Forest",
+                    "storyId": 7
+                },
+                {
+                    "text": "Head back home",
+                    "storyId": 5
+                }
+            ]
+        },
+        {
+            "story_ID": 5,
+            "text": "Back at home, you go over everything inside, looking any more useful items to take with you. The dark army is all but completely gone from your village and you don't want to waste any time and get caught. One thing is certain; however, you will never return to this home ever again. If the rumors are true, this land will be far too corrupted to ever be liveable again. You have only one option, The Avalon Forest. You remembered growing up how your parents always told you that if you should ever find yourself in trouble, take the path through the forest until you've found sanctuary.",
+            "options":[
+                {
+                    "text": "Ready your weapon",
+                    "storyId":6
+                },
+                {
+                    "text": "Run Away",
+                    "storyId": 7
+                }
+            ]
+        },
+        {
+            "story_ID":6,
+            "text": "Heading into the forest, you try and figure why your village was attacked. It has been nothing but peacful for as long as you can remember. You travel along the forest road until a feeling of dread washes over you. You turn around and come face to face with members of the Dark Army, stragglers that must have gotten too caught up in their chaotic activities. You know that you have no choice but to fight.",
+            "options":[
+                {
+                    "text": "Fight",
+                    "storyId": "to battle"
+                },
+                {
+                    "text": "FIGHT!!!!",
+                    "storyId":"to battle"
+                }
+            ]
+        },
+        {
+            "story_ID":7,
+            "text": "Heading into the forest, you try and figure why your village was attacked. It has been nothing but peacful for as long as you can remember. You travel along the forest road until a feeling of dread washes over you. You turn around and come face to face with members of the Dark Army, stragglers that must have gotten too caught up in their chaotic activities. You look around for some sort of an escape route, but every possible route is block off by other Dark Army soldier. You have no other alternative but to fight.",
+            "options":[
+                {
+                    "text": "Fight",
+                    "storyId": "to battle"
+                },
+                {
+                    "text": "FIGHT!!!!",
+                    "storyId":"to battle"
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "story_ID": 0,
+            "text": "After surviving your encounther with Baltic's forces, you continue on your way along the forest",
+            "options": [
+                {
+                    "text": "Rest in the open",
+                    "storyId": 1
+                },
+                {
+                    "text": "Rest in the cave",
+                    "storyId": 2
+                }
+            ]
+        },
+        {
+            "story_ID": 1,
+            "text": "You place some small noise maker traps aaround you to alert you incase someone or something approaches you while you sleep",
+            "options": [
+                {
+                    "text": "Investigate the noise",
+                    "storyId": 3
+                },
+                {
+                    "text": "Hide somewhere else",
+                    "storyId": 4
+                }
+            ]
+        },
+        {
+            "story_ID": 2,
+            "text": "Resting in the open is a needless risk, plus there are far more hiding places inside a cave",
+            "options": [
+                {
+                    "text": "Invesitigate",
+                    "storyId": 3
+                },
+                {
+                    "text": "Hide Further",
+                    "storyId": 4
+                }
+            ]
+        },
+        {
+            "story_ID": 3,
+            "text": "You approach the noise slowly, maintaining the element of surprise.",
+            "options": [
+                {
+                    "text": "Follow the small child",
+                    "storyId": 5
+                },
+                {
+                    "text": "Head towards the screams",
+                    "storyId": 6
+                }
+            ]
+        },
+        {
+            "story_ID": 4,
+            "text": "Further inside the cave you found, aside from large amounts of what you hope is mud, the space provies prefect cover while you try and get some rest.",
+            "options": [
+                {
+                    "text": "Run away!",
+                    "storyId": 7
+                },
+                {
+                    "text": "Follow the small footprints",
+                    "storyId": 5
+                }
+            ]
+        },
+        {
+            "story_ID": 5,
+            "text": "The child, while in shock from being almost eaten, manages to get you towards her parents.",
+            "options":[
+                {
+                    "text": "Save the Carvan",
+                    "storyId":6
+                },
+                {
+                    "text": "Head The Other Way",
+                    "storyId": 7
+                }
+            ]
+        },
+        {
+            "story_ID":6,
+            "text": "You run through tree branchs and shrubs until you find the remains of the caravan.",
+            "options":[
+                {
+                    "text": "Fight",
+                    "storyId": "to battle"
+                },
+                {
+                    "text": "FIGHT!!!!",
+                    "storyId":"to battle"
+                }
+            ]
+        },
+        {
+            "story_ID":7,
+            "text": "Running away from the danger around, you find yourself dace to face with another life or death situation.",
+            "options":[
+                {
+                    "text": "Fight",
+                    "storyId": "to battle"
+                },
+                {
+                    "text": "FIGHT!!!!",
+                    "storyId":"to battle"
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "story_ID": 0,
+            "text": "AFter discorving the truth behind the Dark Army soldiers, you are confronted with a basic truth, Baltic must be stopped.",
+            "options": [
+                {
+                    "text": "Follow the trail",
+                    "storyId": 1
+                },
+                {
+                    "text": "Look around for clues",
+                    "storyId": 2
+                }
+            ]
+        },
+        {
+            "story_ID": 1,
+            "text": "time is off the essences and the Dark Army is getting closer to Arcadia. You follow the trail, hoping that you are not too late.",
+            "options": [
+                {
+                    "text": "Take no breaks",
+                    "storyId": 3
+                },
+                {
+                    "text": "Rest up",
+                    "storyId": 4
+                }
+            ]
+        },
+        {
+            "story_ID": 2,
+            "text": "You may be the only one who knows the truth behind the Dark Army, and if there some chance you might be able to beat him, it might be better to look for clues.",
+            "options": [
+                {
+                    "text": "Look for clues",
+                    "storyId": 5
+                },
+                {
+                    "text": "Rest",
+                    "storyId": 4
+                }
+            ]
+        },
+        {
+            "story_ID": 3,
+            "text": "You find yourself running ragged, but it seems that your efforts are fruitful. In the distance, you see that Dark Army and it's many soliders",
+            "options": [
+                {
+                    "text": "Try and Cut Them Off",
+                    "storyId": 6
+                },
+                {
+                    "text": "Grab a Horse",
+                    "storyId": 5
+                }
+            ]
+        },
+        {
+            "story_ID": 4,
+            "text": "You feel well rested but paranoid that you lost some valuable time tracking down the Dark Army",
+            "options": [
+                {
+                    "text": "Head towards the Capital",
+                    "storyId": 7
+                },
+                {
+                    "text": "Head back home",
+                    "storyId": 5
+                }
+            ]
+        },
+        {
+            "story_ID": 5,
+            "text": "Back at home, you go over everything inside, looking any more useful items to take with you. The dark army is all but completely gone from your village and you don't want to waste any time and get caught. One thing is certain; however, you will never return to this home ever again. If the rumors are true, this land will be far too corrupted to ever be liveable again. You have only one option, The Avalon Forest. You remembered growing up how your parents always told you that if you should ever find yourself in trouble, take the path through the forest until you've found sanctuary.",
+            "options":[
+                {
+                    "text": "Ready your weapon",
+                    "storyId":6
+                },
+                {
+                    "text": "Run Away",
+                    "storyId": 7
+                }
+            ]
+        },
+        {
+            "story_ID":6,
+            "text": "Heading into the forest, you try and figure why your village was attacked. It has been nothing but peacful for as long as you can remember. You travel along the forest road until a feeling of dread washes over you. You turn around and come face to face with members of the Dark Army, stragglers that must have gotten too caught up in their chaotic activities. You know that you have no choice but to fight.",
+            "options":[
+                {
+                    "text": "Fight",
+                    "storyId": "to battle"
+                },
+                {
+                    "text": "FIGHT!!!!",
+                    "storyId":"to battle"
+                }
+            ]
+        },
+        {
+            "story_ID":7,
+            "text": "Heading into the forest, you try and figure why your village was attacked. It has been nothing but peacful for as long as you can remember. You travel along the forest road until a feeling of dread washes over you. You turn around and come face to face with members of the Dark Army, stragglers that must have gotten too caught up in their chaotic activities. You look around for some sort of an escape route, but every possible route is block off by other Dark Army soldier. You have no other alternative but to fight.",
+            "options":[
+                {
+                    "text": "Fight",
+                    "storyId": "to battle"
+                },
+                {
+                    "text": "FIGHT!!!!",
+                    "storyId":"to battle"
+                }
+            ]
+        }
+    ]
 ]
