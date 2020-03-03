@@ -60,3 +60,27 @@
     top: 100px;
     left: 50px;
 }
+
+@media only screen and (max-width: 650px){
+    .heroBar, .enemyBar{
+        width: 125px;
+    }
+    .heroImg,
+    .enemyImg{
+        height: 150px;
+        top: 200px;
+    }
+    .heroImg,
+    .heroBox{
+        right: 10px;
+    }
+    .enemyImg,
+    .enemyBox{
+        left: 10px;
+    }
+
+    .heroBox{
+        /* border-bottom: 5px solid white;
+        border-top: none; */
+    }
+}

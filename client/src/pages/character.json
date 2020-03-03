@@ -1,22 +1,22 @@
 [
     {
+        "class": "Warrior This Character is not used",
+        "url": "https://i.imgur.com/bKvuY6T.png"
+    },
+    {
         "class": "Archer",
-        "url": "https://i.imgur.com/jHqhE2r.png",
-        "description": "This is an Archer, they shoot pointy things."
-    },
-    {
-        "class": "Paladin",
-        "url": "https://i.imgur.com/D4yza7R.png",
-        "description": "This armor slows me down."
-    },
-    {
-        "class": "Mage",
-        "url": "https://i.imgur.com/t75P6vK.png",
-        "description": "I think I'm special cause magics"
+        "url": "https://i.imgur.com/huVIPkL.png"
     },
     {
         "class": "Warrior",
-        "url": "https://i.imgur.com/ODs4zDn.gif",
-        "description": "I has sword"
+        "url": "https://i.imgur.com/fCofyAs.png"
+    },
+    {
+        "class": "Warrior",
+        "url": "https://i.imgur.com/bKvuY6T.png"
+    },
+    {
+        "class": "Mage",
+        "url": "https://i.imgur.com/pIHmyE4.png"
     }
 ]

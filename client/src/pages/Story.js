@@ -174,13 +174,15 @@ class Battle extends Component {
     render() {
 
         console.log('this is our state', this.state)
+        console.log('this is our props', this.props)
+
 
         return (
             <div>
                 {this.state.battleRender ? (
                     <div>
                         <Moving />
-                        {this.state.enemyList[this.state.battleCounter] ? (<BattleStats heroHP={this.state.heroHP} heroMaxHP={this.state.heroMaxHP} enemy={this.state.enemyList[this.state.battleCounter]} />) : ''}
+                        {this.state.enemyList[this.state.battleCounter] ? (<BattleStats heroIndex={this.props.heroIndex} heroHP={this.state.heroHP} heroMaxHP={this.state.heroMaxHP} enemy={this.state.enemyList[this.state.battleCounter]} />) : ''}
 
                         <BattleText handleButtonFight={this.handleButtonFight} handleButtonInventory={this.handleButtonInventory} handleButtonQuit={this.handleButtonQuit} handleButtonRun={this.handleButtonRun} battleDialogue={this.state.battleDialogue} faded={this.state.faded} />
                         <Inventory handleButtonInventory={this.handleButtonInventory} inventory={this.state.inventory} invenShow={this.state.invenShow} />
@@ -189,8 +191,8 @@ class Battle extends Component {
                     </div>
                 ) : (
                         <div>
-                            <Moving />
-                            <MoveText choiceBtn={this.choiceBtn} story={Story[this.state.storyID]} />
+                            {/* <Moving /> */}
+                            <MoveText heroIndex={this.props.heroIndex} choiceBtn={this.choiceBtn} story={Story[this.state.storyID]} />
                         </div>
                     )}
                 {this.state.gameover ? (

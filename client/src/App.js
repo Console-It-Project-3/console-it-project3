@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Home from "./pages/Home";
 import Character from "./pages/Character";
 import Story from "./pages/Story";
@@ -13,6 +13,9 @@ import Login from "./pages/LogIn";
 
 
 function App() {
+
+  const [heroIndex, setHeroIndex] = useState(1)
+
   return (
     <Router>
       <div>
@@ -21,8 +24,8 @@ function App() {
           <Route exact path="/home" component={Home} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/character" component={Character} />
-          <Route exact path="/story" component={Story} />
+          <Route exact path="/character" render={(props) => <Character {...props} heroIndex={heroIndex} setHeroIndex={setHeroIndex} />} />
+          <Route exact path="/story" render={(props) => <Story {...props} heroIndex={heroIndex} setHeroIndex={setHeroIndex} />} />
           <Route exact path="/market" component={Market} />
           <Route exact path="/highscore" component={Highscore} />
           <Route exact path="/gameover" component={GameOver} />

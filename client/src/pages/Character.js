@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import Sprite from "../components/Character"
-import Scroll from "../components/scroll"
 import "./Character.css"
 import characters from "./character.json"
-
+import { withRouter } from 'react-router-dom';
 
 
 class Character extends Component {
@@ -24,9 +22,9 @@ class Character extends Component {
 
     handleButtonChoose = () => {
         console.log("clicked this is current hero Index!!!", this.state.heroIndex);
-        window.location.href = "story"
-        // const char = document.getElementsByClassName("active").value()
-        // console.log(char);
+        this.props.setHeroIndex(this.state.heroIndex)
+        // window.location.href = "story"
+        this.props.history.push('/story')
 
     }
 
@@ -46,16 +44,20 @@ class Character extends Component {
 
         if (direction === 'next') {
             if (this.state.heroIndex === 4) {
+                this.props.setHeroIndex(1)
                 this.setState({ heroIndex: 1 })
             } else {
+                this.props.setHeroIndex(this.state.heroIndex + 1)
                 this.setState({ heroIndex: this.state.heroIndex + 1 })
             }
         }
 
         if (direction === 'previous') {
             if (this.state.heroIndex === 1) {
+                this.props.setHeroIndex(4)
                 this.setState({ heroIndex: 4 })
             } else {
+                this.props.setHeroIndex(this.state.heroIndex - 1)
                 this.setState({ heroIndex: this.state.heroIndex - 1 })
             }
         }
@@ -63,6 +65,7 @@ class Character extends Component {
 
     render() {
         console.log('this is our state', this.state)
+        console.log('this is our props', this.props)
         return (
             <div className="charContain">
 
@@ -108,4 +111,4 @@ class Character extends Component {
     }
 }
 
-export default Character
+export default withRouter(Character) 

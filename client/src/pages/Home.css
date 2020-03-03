@@ -18,12 +18,13 @@ button:focus {
     background-attachment: fixed;
     background-size: cover;
     min-height: 800px;
+
     min-width: 1560px;
     display: flex;
 }
 .jumbotron{
-    /* justify-content: center; */
-    margin:auto;
+    justify-content: center;
+    margin:10% 40% 0 40%;
     margin-top:10%;
     /* padding: 20px; */
     max-width: 475px;
