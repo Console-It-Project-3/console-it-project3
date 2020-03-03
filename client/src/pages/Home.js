@@ -100,7 +100,7 @@ class Home extends Component {
 
     render() {
         return (
-            <div>
+            <div className="landingImg">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
                     <div class="container">
                         <a class="navbar-brand" href="/home">KnightFall</a>
@@ -112,7 +112,7 @@ class Home extends Component {
                                 <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
                             </ul>
                             <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
-                            {/* <li class="nav-item order-2 order-md-1"><a href="/signup" class="nav-link" title="settings"><i class="fa fa-cog fa-fw fa-lg"></i></a></li> */}
+                                {/* <li class="nav-item order-2 order-md-1"><a href="/signup" class="nav-link" title="settings"><i class="fa fa-cog fa-fw fa-lg"></i></a></li> */}
                                 <li class="dropdown order-1">
                                     <button type="button" id="sign-up-btn" class="btn btn-outline-secondary" ><a href="/signup" class="nav-link">Sign Up</a><span class="caret"></span></button>
                                 </li>
@@ -143,11 +143,13 @@ class Home extends Component {
                 </nav>
 
                 <div className="jumbotron">
-                    <h1 className="display-4">Hello, world!</h1>
-                    <p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                    <hr className="my-4"></hr>
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                    <a className="btn btn-primary btn-lg btn-block" href="/signup" role="button">Play Now</a>
+                    <div className="jumboContain">
+                        <h1 className="display-4">KnightFall</h1>
+                        <p className="lead">In a world where evil is left to thrive, a hero is needed to bring balance to the force! </p>
+                        <hr className="my-4"></hr>
+                        <p className="call2Action">Will you be that hero?</p>
+                        <a className="playBtn btn btn-primary btn-lg btn-block" href="/signup" role="button">Play Now</a>
+                    </div>
                 </div>
             </div>
         );

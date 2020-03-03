@@ -8,13 +8,9 @@ import Run from "../components/Run"
 import MoveText from "../components/moveText"
 import createEnemies from '../utils/createEnemies.js';
 import Story from "./Story.json";
+import "./Story.css"
 
 
-
-function handleButton3() {
-    console.log("clicked");
-
-}
 
 class Battle extends Component {
 
@@ -39,7 +35,8 @@ class Battle extends Component {
         score: '',
         battleCounter: 0,
         enemyList: createEnemies(),
-        storyID: 0
+        storyID: 0,
+        gameover: false,
     }
 
     handleButtonInventory = () => {
@@ -61,9 +58,13 @@ class Battle extends Component {
             faded: false
         }, function () {
             if (this.state.enemyList[this.state.battleCounter].enemyHP <= 0 && this.state.currentlyInBattle === true) {
-                console.log('defeated enimes!!!')
+
 
                 this.endBattle()
+            } else if (this.state.heroHP <= 0) {
+                this.setState({
+                    gameover: true
+                })
             } else {
                 this.setState({
                     heroHP: this.state.heroHP - this.state.enemyList[this.state.battleCounter].enemyAttack,
@@ -128,6 +129,12 @@ class Battle extends Component {
         }
     }
 
+    handlebuttonQuit = () => {
+        console.log("clicking");
+
+        window.location.href = "home"
+    }
+
     handleReturnStory = () => {
 
         this.setState({
@@ -145,7 +152,7 @@ class Battle extends Component {
         // }
     }
 
-    choiceBtn1 = (num) => {
+    choiceBtn = (num) => {
 
         if (num == "to battle") {
             this.setState({
@@ -160,6 +167,9 @@ class Battle extends Component {
     }
 
 
+    handleGameOver = () => {
+        window.location.href = "highscore"
+    }
 
     render() {
 
@@ -172,7 +182,7 @@ class Battle extends Component {
                         <Moving />
                         {this.state.enemyList[this.state.battleCounter] ? (<BattleStats heroHP={this.state.heroHP} heroMaxHP={this.state.heroMaxHP} enemy={this.state.enemyList[this.state.battleCounter]} />) : ''}
 
-                        <BattleText handleButtonFight={this.handleButtonFight} handleButtonInventory={this.handleButtonInventory} handleButton3={this.handleButton3} handleButtonRun={this.handleButtonRun} battleDialogue={this.state.battleDialogue} faded={this.state.faded} />
+                        <BattleText handleButtonFight={this.handleButtonFight} handleButtonInventory={this.handleButtonInventory} handleButtonQuit={this.handleButtonQuit} handleButtonRun={this.handleButtonRun} battleDialogue={this.state.battleDialogue} faded={this.state.faded} />
                         <Inventory handleButtonInventory={this.handleButtonInventory} inventory={this.state.inventory} invenShow={this.state.invenShow} />
                         <ReturnToStory handleReturnStory={this.handleReturnStory} endShow={this.state.endShow} />
                         <Run handleRunContinue={this.handleRunContinue} runShow={this.state.runShow} runDia={this.state.runDia} runClass={this.state.runClass} />
@@ -180,9 +190,15 @@ class Battle extends Component {
                 ) : (
                         <div>
                             <Moving />
-                            <MoveText choiceBtn1={this.choiceBtn1} story={Story[this.state.storyID]} />
+                            <MoveText choiceBtn={this.choiceBtn} story={Story[this.state.storyID]} />
                         </div>
                     )}
+                {this.state.gameover ? (
+                    <div className="gameover">
+                        <p className="killedText">You have been killed! <br />Game Over!</p>
+                        <button onClick={this.handleGameOver} className="gameOverBtn">High Scores</button></div>
+                ) : ''}
+
             </div>
         )
     }

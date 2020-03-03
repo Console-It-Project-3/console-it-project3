@@ -1,7 +1,7 @@
 import React from 'react'
 import './battleText.css'
 
-function battleText({ handleButtonFight, handleButtonInventory, handleButton3, handleButtonRun, battleDialogue, faded }) {
+function battleText({ handleButtonFight, handleButtonInventory, handleButtonQuit, handleButtonRun, battleDialogue, faded }) {
 
 
 
@@ -16,8 +16,8 @@ function battleText({ handleButtonFight, handleButtonInventory, handleButton3, h
             <div className="battleButtons">
                 <button onClick={handleButtonFight} className="battleButton1">Fight</button>
                 <button onClick={handleButtonInventory} className="battleButton2">Inventory</button>
-                <button onClick={handleButton3} className="battleButton3">Button3</button>
                 <button onClick={handleButtonRun} className="battleButton4">Run</button>
+                <button onClick={handleButtonQuit} className="battleButton3">Quit</button>
             </div>
 
         </div>

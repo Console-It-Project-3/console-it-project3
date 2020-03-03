@@ -1,7 +1,7 @@
 import React from 'react'
 import './moveText.css'
 
-function text({ story, choiceBtn1, choiceBtn2 }) {
+function text({ story, choiceBtn }) {
     return (
 
         <div className="all">
@@ -9,8 +9,8 @@ function text({ story, choiceBtn1, choiceBtn2 }) {
                 <p className="pText"> {story.text} </p>
             </div>
             <div className="buttons">
-                <button onClick={() => { choiceBtn1(story.options[0].storyId) }} className="button1">{story.options[0].text}</button>
-                <button onClick={() => { choiceBtn1(story.options[1].storyId) }} className="button2">{story.options[1].text}</button>2
+                <button onClick={() => { choiceBtn(story.options[0].storyId) }} className="button1">{story.options[0].text}</button>
+                <button onClick={() => { choiceBtn(story.options[1].storyId) }} className="button2">{story.options[1].text}</button>2
             </div>
 
         </div>
