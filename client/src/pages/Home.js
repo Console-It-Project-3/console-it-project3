@@ -107,21 +107,25 @@ class Home extends Component {
 
     render() {
         return (
-            <div>
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
-                    <div className="container">
-                        <a className="navbar-brand" href="/home">KnightFall</a>
-                        <button className="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+
+            <div className="landingImg">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
+                    <div class="container">
+                        <a class="navbar-brand" href="/home">KnightFall</a>
+                        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+
                             &#9776;
                         </button>
                         <div className="collapse navbar-collapse" id="exCollapsingNavbar">
                             <ul className="nav navbar-nav">
                                 <li className="nav-item"><a href="/" className="nav-link">Home</a></li>
                             </ul>
+
                             <ul className="nav navbar-nav flex-row justify-content-between ml-auto">
                             {/* <li className="nav-item order-2 order-md-1"><a href="/signup" clclassNameass="nav-link" title="settings"><i className="fa fa-cog fa-fw fa-lg"></i></a></li> */}
                                 <li className="dropdown order-1">
                                     <button type="button" id="sign-up-btn" className="btn btn-outline-secondary" ><a href="/signup" className="nav-link">Sign Up</a><span className="caret"></span></button>
+
                                 </li>
                                 <li className="dropdown order-1">
                                     <button type="button" id="dropdownMenu1" data-toggle="dropdown" className="btn btn-outline-secondary dropdown-toggle">Login <span className="caret"></span></button>
@@ -161,11 +165,13 @@ class Home extends Component {
                 </nav>
 
                 <div className="jumbotron">
-                    <h1 className="display-4">Hello, world!</h1>
-                    <p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                    <hr className="my-4"></hr>
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                    <a className="btn btn-primary btn-lg btn-block" href="/signup" role="button">Play Now</a>
+                    <div className="jumboContain">
+                        <h1 className="display-4">KnightFall</h1>
+                        <p className="lead">In a world where evil is left to thrive, a hero is needed to bring balance to the force! </p>
+                        <hr className="my-4"></hr>
+                        <p className="call2Action">Will you be that hero?</p>
+                        <a className="playBtn btn btn-primary btn-lg btn-block" href="/signup" role="button">Play Now</a>
+                    </div>
                 </div>
             </div>
         );

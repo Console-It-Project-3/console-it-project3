@@ -32,3 +32,8 @@
     
  }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 300px;
+  width: 100px;
+}

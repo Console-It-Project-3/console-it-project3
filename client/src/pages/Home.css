@@ -4,14 +4,46 @@ button:focus {
 
 .navbar .dropdown-menu .form-control {
     width: 200px;
+    
+}
+
+.bg-dark{
+    background-color: #5a3c1c;
+}
+.landingImg{
+    margin-top: -35px;
+    margin-right: -50px;
+    background: url("https://i.imgur.com/VW2izVa.png");
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 800px;
+    min-width: 1560px;
+    display: flex;
 }
 .jumbotron{
+    /* justify-content: center; */
     margin:auto;
     margin-top:10%;
+    /* padding: 20px; */
     max-width: 475px;
-    background: rgba(220,220,220, 0.875);
+    background:url("https://i.imgur.com/0XoMcjD.png");
+    background-size: 100% 100%;
+
     font-family: Papyrus;
 }
-.btn btn-primary btn-lg justify-content-end{
+
+.jumboContain{
+    padding: 30px;
+    text-align: center;
+}
+.call2Action{
+    font-weight: bold;
+    font-size: 20px;
+}
+.playBtn {
     margin: auto;
+    background: #5a3c1c;
+    border: none;
+    width: 300px;
 }
