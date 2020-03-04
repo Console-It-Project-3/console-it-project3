@@ -66,7 +66,8 @@ class Battle extends Component {
 
 
                     this.endBattle()
-                } else if (this.state.heroHP <= 0) {
+                }
+                if (this.state.heroHP <= 0) {
                     this.setState({
                         gameover: true
                     })
