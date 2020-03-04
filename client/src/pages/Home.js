@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "../pages/Home.css"
 import API from "../utils/api";
 import axios from "axios";
+// import { response } from "express";
+import { withRouter } from 'react-router'
 // add login feature
 
 
@@ -31,6 +33,7 @@ class Home extends Component {
     // need to mount all of the story
     // need to mount the random events
     componentDidMount() {
+        this.getUser()
         // API.getUser().then(data => {
         //     console.log("hit api zero", data);
         //     this.setState({ email: data.data })
@@ -65,6 +68,32 @@ class Home extends Component {
         })
     }
 
+    updateUser(userObject) {
+        this.setState(userObject)
+    }
+
+    getUser() {
+        axios.get('/api/users/').then(response => {
+            console.log('get user response: ');
+            console.log(response.data);
+            if (response.data.user) {
+                console.log(response.data.user);
+                console.log('there is a user saved in the database');
+                this.setState({
+                    loggedIn: true,
+                    username: response.data.user.username,
+                    user: response.data.user
+                })
+            } else {
+                console.log('get user: no user');
+                this.setState({
+                    loggedIn: false,
+                    username: null
+                })
+            }
+        })
+    }
+
     handleChange(event) {
         console.log("typing");
         this.setState({
@@ -93,9 +122,9 @@ class Home extends Component {
                         username: response.data.username
                     })
                     console.log(this.state);
-                    
+
                     this.props.history.push('/character');
-                  
+
                 } else {
                     console.log('repeating data, check error')
                 }
@@ -122,7 +151,7 @@ class Home extends Component {
                             </ul>
 
                             <ul className="nav navbar-nav flex-row justify-content-between ml-auto">
-                            {/* <li className="nav-item order-2 order-md-1"><a href="/signup" clclassNameass="nav-link" title="settings"><i className="fa fa-cog fa-fw fa-lg"></i></a></li> */}
+                                {/* <li className="nav-item order-2 order-md-1"><a href="/signup" clclassNameass="nav-link" title="settings"><i className="fa fa-cog fa-fw fa-lg"></i></a></li> */}
                                 <li className="dropdown order-1">
                                     <button type="button" id="sign-up-btn" className="btn btn-outline-secondary" ><a href="/signup" className="nav-link">Sign Up</a><span className="caret"></span></button>
 
@@ -133,24 +162,24 @@ class Home extends Component {
                                         <li className="px-3 py-2">
                                             <form className="form" role="form">
                                                 <div className="form-group">
-                                                    <input 
-                                                    id="emailInput" 
-                                                    name="email" 
-                                                    value={this.state.username}
-                                                    onChange={this.handleChange} placeholder="Email" className="form-control form-control-sm" 
-                                                    type="text" 
-                                                    required="" />
+                                                    <input
+                                                        id="usernameInput"
+                                                        name="username"
+                                                        value={this.state.username}
+                                                        onChange={this.handleChange} placeholder="username" className="form-control form-control-sm"
+                                                        type="text"
+                                                        required="" />
                                                 </div>
                                                 <div className="form-group">
-                                                    <input 
-                                                    id="passwordInput" name="password" 
-                                                    value={this.state.password}
-                                                    onChange={this.handleChange}placeholder="Password" className="form-control form-control-sm" 
-                                                    type="text" 
-                                                    required="" />
+                                                    <input
+                                                        id="passwordInput" name="password"
+                                                        value={this.state.password}
+                                                        onChange={this.handleChange} placeholder="Password" className="form-control form-control-sm"
+                                                        type="text"
+                                                        required="" />
                                                 </div>
                                                 <div className="form-group">
-                                                    <button type="submit" onClick={this.handleSubmit}className="btn btn-primary btn-block">Login</button>
+                                                    <button type="submit" onClick={this.handleSubmit} className="btn btn-primary btn-block">Login</button>
                                                 </div>
                                                 <div className="form-group text-center">
                                                     <small><a href="#" data-toggle="modal" data-target="#modalPassword">Forgot password?</a></small>
