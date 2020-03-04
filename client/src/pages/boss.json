@@ -1,0 +1,7 @@
+{
+    "enemyName": "Baltic",
+    "enemyHP": 110,
+    "enemyMaxHP": 110,
+    "enemyAttack": 20,
+    "enemySrc": "https://i.imgur.com/AVKiAIO.png"
+}
