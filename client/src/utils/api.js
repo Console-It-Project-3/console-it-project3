@@ -15,6 +15,9 @@ const API = {
     //     console.log(id);
     //     return axios.get("http://localhost:3001/api/user/" + id);
     // },
+    getUser: function () {
+        return axios.get("http://localhost:3001/api/user/all");
+    },
     getCharacters: function () {
         return axios.get("http://localhost:3001/api/character/all");
     },

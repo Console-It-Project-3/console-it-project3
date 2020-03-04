@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Character.css"
 import characters from "./character.json"
 import { withRouter } from 'react-router-dom';
+import axios from 'axios'
 
 
 class Character extends Component {
@@ -24,9 +25,32 @@ class Character extends Component {
         console.log("clicked this is current hero Index!!!", this.state.heroIndex);
         this.props.setHeroIndex(this.state.heroIndex)
         // window.location.href = "story"
-        this.props.history.push('/story')
+
+        axios.post('/api/character/', {
+            character: this.state.heroIndex,
+        })
+            .then(response => {
+                console.log("character added: ");
+                console.log(response)
+                console.log(response.status);
+                if (response.status === 200) {
+                    console.log('successful login')
+
+                    this.props.history.push('/');
+
+                } else {
+                    console.log('repeating data, check error')
+                }
+            }).catch(error => {
+                console.log('login error: ')
+                console.log(error)
+
+            })
 
     }
+
+
+
 
     setCoolDown = () => {
 

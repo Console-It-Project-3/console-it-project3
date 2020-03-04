@@ -18,6 +18,7 @@ class Home extends Component {
             potionData: [],
             RandomData: [],
             storyData: [],
+            userData:[],
             username: null,
             password: null,
             user: null,
@@ -38,37 +39,40 @@ class Home extends Component {
     // need to mount all of the story
     // need to mount the random events
     componentDidMount() {
-        this.getUser()
         // API.getUser().then(data => {
-        //     console.log("hit api zero", data);
-        //     this.setState({ email: data.data })
+        //     console.log("users", data)
+        //     this.setState({ userData: data.data })
         // })
+        API.getUser().then(data => {
+            console.log("hit api zero", data);
+            this.setState({ email: data.data })
+        })
         API.getAllCharacters().then(data => {
-            // console.log("hit api one", data.data);
+            console.log("hit api one", data.data);
             this.setState({ characterData: data.data })
         })
         API.getAllEnemies({}).then(data => {
-            // console.log("hit api two", data.data);
+            console.log("hit api two", data.data);
             this.setState({ enemiesData: data.data })
         })
         API.getAllEquipment({}).then(data => {
-            // console.log("hit api three", data.data);
+            console.log("hit api three", data.data);
             this.setState({ equipmentData: data.data })
         })
         API.getAllFood({}).then(data => {
-            // console.log("hit api four", data.data);
+            console.log("hit api four", data.data);
             this.setState({ foodData: data.data })
         })
         API.getAllPotion({}).then(data => {
-            // console.log("hit api five", data.data);
+            console.log("hit api five", data.data);
             this.setState({ potionData: data.data })
         })
         API.getAllRandom({}).then(data => {
-            // console.log("hit api six", data.data);
+            console.log("hit api six", data.data);
             this.setState({ RandomData: data.data })
         })
         API.getAllStory({}).then(data => {
-            // console.log("hit api seven", data.data);
+            console.log("hit api seven", data.data);
             this.setState({ storyData: data.data })
         })
     }
@@ -78,11 +82,11 @@ class Home extends Component {
     }
 
     getUser() {
-        axios.get('/api/users/').then(response => {
+        axios.get('api/user/').then(response => {
             console.log('get user response: ');
             console.log(response.data);
             if (response.data.user) {
-                console.log(response.data.user);
+                console.log("hello " + response.data.user);
                 console.log('there is a user saved in the database');
                 this.setState({
                     loggedIn: true,
