@@ -73,8 +73,8 @@ app.use(passport.session()) // calls the deserializeUser
 
 app.use(express.static(path.join(__dirname, "client", "build")))
 // Routes
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "public", "index.html"));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/build/index.html"));
 });
 // app.use('/user', user)
 // Send every request to the React app
