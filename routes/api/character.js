@@ -7,7 +7,7 @@ const characterController = require("../../controllers/character");
 
 // Matches with "/api/character/:id"
 router
-  .route("/all")
+  .route("/")
   .get(characterController.findAll)
   .get(characterController.findById)
   .post(characterController.create)
@@ -16,8 +16,8 @@ router
   // .delete(characterController.remove);
 
 
-  router
-  .route("/all")
+  // router
+  // .route("/all")
 
 // .delete(characterController.remove);
 // router

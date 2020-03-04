@@ -145,7 +145,7 @@ class Battle extends Component {
             currentlyInBattle: true,
             endShow: false
         }, function () {
-            if (this.state.battleCounter == 3) {
+            if (this.state.battleCounter === 3) {
                 this.setState({
                     battleRender: false
                 })
@@ -157,7 +157,7 @@ class Battle extends Component {
 
     choiceBtn = (num) => {
 
-        if (num == "to battle") {
+        if (num === "to battle") {
             this.setState({
                 battleRender: true,
                 storyCounter: this.state.storyCounter + 1,

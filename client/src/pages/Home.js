@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "../pages/Home.css"
 import API from "../utils/api";
 import axios from "axios";
+// import { response } from "express";
+import { withRouter } from 'react-router'
 // add login feature
 
 
@@ -16,10 +18,16 @@ class Home extends Component {
             potionData: [],
             RandomData: [],
             storyData: [],
-            email: '',
-            password: ''
+            userData: [],
+            username: null,
+            password: null,
+            user: null,
+            redirectTo: null
         }
-        this.tryLogin = this.tryLogin.bind(this)
+        this.getUser = this.getUser.bind(this)
+        this.updateUser = this.updateUser.bind(this)
+        this.componentDidMount = this.getUser.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
     }
 
@@ -32,36 +40,66 @@ class Home extends Component {
     // need to mount the random events
     componentDidMount() {
         // API.getUser().then(data => {
-        //     console.log("hit api zero", data);
-        //     this.setState({ email: data.data })
+        //     console.log("users", data)
+        //     this.setState({ userData: data.data })
         // })
-        API.getCharacters().then(data => {
-            // console.log("hit api one", data.data);
+        API.getUser().then(data => {
+            console.log("hit api zero", data);
+            this.setState({ email: data.data })
+        })
+        API.getAllCharacters().then(data => {
+            console.log("hit api one", data.data);
             this.setState({ characterData: data.data })
         })
-        API.getEnemies({}).then(data => {
-            // console.log("hit api two", data.data);
+        API.getAllEnemies({}).then(data => {
+            console.log("hit api two", data.data);
             this.setState({ enemiesData: data.data })
         })
-        API.getEquipment({}).then(data => {
-            // console.log("hit api three", data.data);
+        API.getAllEquipment({}).then(data => {
+            console.log("hit api three", data.data);
             this.setState({ equipmentData: data.data })
         })
-        API.getFood({}).then(data => {
-            // console.log("hit api four", data.data);
+        API.getAllFood({}).then(data => {
+            console.log("hit api four", data.data);
             this.setState({ foodData: data.data })
         })
-        API.getPotion({}).then(data => {
-            // console.log("hit api five", data.data);
+        API.getAllPotion({}).then(data => {
+            console.log("hit api five", data.data);
             this.setState({ potionData: data.data })
         })
-        API.getRandom({}).then(data => {
-            // console.log("hit api six", data.data);
+        API.getAllRandom({}).then(data => {
+            console.log("hit api six", data.data);
             this.setState({ RandomData: data.data })
         })
-        API.getStory({}).then(data => {
-            // console.log("hit api seven", data.data);
+        API.getAllStory({}).then(data => {
+            console.log("hit api seven", data.data);
             this.setState({ storyData: data.data })
+        })
+    }
+
+    updateUser(userObject) {
+        this.setState(userObject)
+    }
+
+    getUser() {
+        axios.get('api/user/').then(response => {
+            console.log('get user response: ');
+            console.log(response.data);
+            if (response.data.user) {
+                console.log("hello " + response.data.user);
+                console.log('there is a user saved in the database');
+                this.setState({
+                    loggedIn: true,
+                    username: response.data.user.username,
+                    user: response.data.user
+                })
+            } else {
+                console.log('get user: no user');
+                this.setState({
+                    loggedIn: false,
+                    username: null
+                })
+            }
         })
     }
 
@@ -71,40 +109,40 @@ class Home extends Component {
             [event.target.name]: event.target.value
         })
     }
-    tryLogin(event) {
-        event.preventDefault();
-        console.log("clicking");
-        var obj = {
-            email: this.state.email,
-            password: this.state.password
-        }
-        console.log(obj)
-        axios
-            .post('/api/user/login', obj)
+    handleSubmit(event) {
+        console.log('sign-up handleSubmit, username: ')
+        console.log(this.state.username)
+
+        event.preventDefault()
+
+        //request to server to add a new username/password
+        axios.get('/api/user/login', {
+            username: this.state.username,
+            password: this.state.password,
+        })
             .then(response => {
-                console.log('login response: ')
+                console.log("login response: ");
                 console.log(response)
                 console.log(response.status);
                 if (response.status === 200) {
-                    // update App.js state
-                    this.props.updateUser({
+                    console.log('successful login')
+                    this.updateUser({
                         loggedIn: true,
                         username: response.data.username
                     })
-                    // update the state to redirect to home
-                    this.setState({
-                        redirectTo: '/character'
-                    })
+                    console.log(this.state);
+
+                    this.props.history.push('/character');
+
                 } else {
-                    console.log('error')
+                    console.log('repeating data, check error')
                 }
             }).catch(error => {
                 console.log('login error: ')
-                console.log(error);
+                console.log(error)
+
             })
     }
-
-
     render() {
         return (
 
@@ -134,10 +172,10 @@ class Home extends Component {
                                             <form className="form" role="form">
                                                 <div className="form-group">
                                                     <input
-                                                        id="emailInput"
-                                                        name="email"
-                                                        value={this.state.email}
-                                                        onChange={this.handleChange} placeholder="Email" className="form-control form-control-sm"
+                                                        id="usernameInput"
+                                                        name="username"
+                                                        value={this.state.username}
+                                                        onChange={this.handleChange} placeholder="username" className="form-control form-control-sm"
                                                         type="text"
                                                         required="" />
                                                 </div>
@@ -150,7 +188,7 @@ class Home extends Component {
                                                         required="" />
                                                 </div>
                                                 <div className="form-group">
-                                                    <button type="submit" onClick={this.tryLogin} className="btn btn-primary btn-block">Login</button>
+                                                    <button type="submit" onClick={this.handleSubmit} className="btn btn-primary btn-block">Login</button>
                                                 </div>
                                                 <div className="form-group text-center">
                                                     <small><a href="#" data-toggle="modal" data-target="#modalPassword">Forgot password?</a></small>
@@ -178,4 +216,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default withRouter(Home);

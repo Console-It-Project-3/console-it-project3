@@ -11,7 +11,6 @@ import Signup from './pages/SignUp';
 import Login from "./pages/LogIn";
 
 
-
 function App() {
 
   const [heroIndex, setHeroIndex] = useState(1)

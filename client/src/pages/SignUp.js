@@ -152,7 +152,7 @@ class Signup extends Component {
                             </div>
                         </div>
                         <div className="form-group row">
-                            <label htmlFor="inputPassword3" className="col-sm-2 col-form-label">Confirm Password: </label>
+                            <label htmlFor="inputPassword4" className="col-sm-2 col-form-label">Confirm Password: </label>
                             <div className="col-sm-10">
                                 <input type="password"
                                     id="confirmPassword"
