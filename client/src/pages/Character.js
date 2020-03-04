@@ -25,9 +25,9 @@ class Character extends Component {
         console.log("clicked this is current hero Index!!!", this.state.heroIndex);
         this.props.setHeroIndex(this.state.heroIndex)
         // window.location.href = "story"
-
+        console.log(this.state.data[this.state.heroIndex])
         axios.post('/api/character/', {
-            character: this.state.heroIndex,
+            character: this.state.data[this.state.heroIndex],
         })
             .then(response => {
                 console.log("character added: ");
@@ -36,7 +36,7 @@ class Character extends Component {
                 if (response.status === 200) {
                     console.log('successful login')
 
-                    this.props.history.push('/');
+                    this.props.history.push('/story');
 
                 } else {
                     console.log('repeating data, check error')

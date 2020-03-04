@@ -3,43 +3,46 @@ const Schema = mongoose.Schema;
 
 
 const characterSchema = new mongoose.Schema({
-  user: {
-    type: Schema.Types.ObjectId, 
-    ref: 'User'
-  },
-  equipment: {
-    type: Schema.Types.ObjectId, 
-    ref: 'equipment'
-  },
+  // user: {
+  //   type: Schema.Types.ObjectId,
+  //   ref: 'User'
+  // },
+  // equipment: {
+  //   type: Schema.Types.ObjectId,
+  //   ref: 'equipment'
+  // },
 
-  name: {
-    type: String,
-    required: true,
-    unique: true
-  },
+  // name: {
+  //   type: String,
+  //   required: true,
+  //   unique: true
+  // },
   class: {
     type: String,
-    default: "",
-    required: true
-  },
-  attack: {
-    type: Number,
     default: ""
   },
-  defence: {
-    type: Number,
-    default: ""
-  },
-
-  health: {
-    type: Number,
-    default: ""
-  },
-
-  magic: {
-    type: Number,
-    default: ""
+  url:{
+    type: String,
+    default:''
   }
+  // attack: {
+  //   type: Number,
+  //   default: ""
+  // },
+  // defence: {
+  //   type: Number,
+  //   default: ""
+  // },
+
+  // health: {
+  //   type: Number,
+  //   default: ""
+  // },
+
+  // magic: {
+  //   type: Number,
+  //   default: ""
+  // }
 });
 
 const Character = mongoose.model("Character", characterSchema);

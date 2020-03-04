@@ -63,52 +63,52 @@ const Users = [
 
 const PresetCharacters = [
   {
-    name: "Hector",
+    url: "",
     class: "Warrior",
-    attack: 5,
-    defence: 5,
-    health: 20,
-    magic: 0
+    // attack: 5,
+    // defence: 5,
+    // health: 20,
+    // magic: 0
   },
   {
-    name: "Merinda",
+    url: "",
     class: "Archer",
-    attack: 10,
-    defence: 3,
-    health: 15,
-    magic: 0
+    // attack: 10,
+    // defence: 3,
+    // health: 15,
+    // magic: 0
   },
   {
-    name: "Jafar",
+    url: "",
     class: "Mage",
-    attack: 1,
-    defence: 5,
-    health: 15,
-    magic: 10
+    // attack: 1,
+    // defence: 5,
+    // health: 15,
+    // magic: 10
   },
   {
-    name: "Tankenstien",
+    url: "",
     class: "Tank",
-    attack: 3,
-    defence: 10,
-    health: 25,
-    magic: 0
+    // attack: 3,
+    // defence: 10,
+    // health: 25,
+    // magic: 0
   },
   {
-    name: "Olaf",
+    url: "",
     class: "Berserker",
-    attack: 15,
-    defence: 1,
-    health: 10,
-    magic: 0
+    // attack: 15,
+    // defence: 1,
+    // health: 10,
+    // magic: 0
   },
   {
-    name: "Leona",
+    url: "",
     class: "Cleric",
-    attack: 1,
-    defence: 1,
-    health: 20,
-    magic: 20
+    // attack: 1,
+    // defence: 1,
+    // health: 20,
+    // magic: 20
   }
 ];
 
