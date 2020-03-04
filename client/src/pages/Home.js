@@ -71,7 +71,7 @@ class Home extends Component {
             [event.target.name]: event.target.value
         })
     }
-    tryLogin(event){
+    tryLogin(event) {
         event.preventDefault();
         console.log("clicking");
         var obj = {
@@ -95,7 +95,7 @@ class Home extends Component {
                     this.setState({
                         redirectTo: '/character'
                     })
-                }else {
+                } else {
                     console.log('error')
                 }
             }).catch(error => {
@@ -122,7 +122,7 @@ class Home extends Component {
                             </ul>
 
                             <ul className="nav navbar-nav flex-row justify-content-between ml-auto">
-                            {/* <li className="nav-item order-2 order-md-1"><a href="/signup" clclassNameass="nav-link" title="settings"><i className="fa fa-cog fa-fw fa-lg"></i></a></li> */}
+                                {/* <li className="nav-item order-2 order-md-1"><a href="/signup" clclassNameass="nav-link" title="settings"><i className="fa fa-cog fa-fw fa-lg"></i></a></li> */}
                                 <li className="dropdown order-1">
                                     <button type="button" id="sign-up-btn" className="btn btn-outline-secondary" ><a href="/signup" className="nav-link">Sign Up</a><span className="caret"></span></button>
 
@@ -133,24 +133,24 @@ class Home extends Component {
                                         <li className="px-3 py-2">
                                             <form className="form" role="form">
                                                 <div className="form-group">
-                                                    <input 
-                                                    id="emailInput" 
-                                                    name="email" 
-                                                    value={this.state.email}
-                                                    onChange={this.handleChange} placeholder="Email" className="form-control form-control-sm" 
-                                                    type="text" 
-                                                    required="" />
+                                                    <input
+                                                        id="emailInput"
+                                                        name="email"
+                                                        value={this.state.email}
+                                                        onChange={this.handleChange} placeholder="Email" className="form-control form-control-sm"
+                                                        type="text"
+                                                        required="" />
                                                 </div>
                                                 <div className="form-group">
-                                                    <input 
-                                                    id="passwordInput" name="password" 
-                                                    value={this.state.password}
-                                                    onChange={this.handleChange}placeholder="Password" className="form-control form-control-sm" 
-                                                    type="text" 
-                                                    required="" />
+                                                    <input
+                                                        id="passwordInput" name="password"
+                                                        value={this.state.password}
+                                                        onChange={this.handleChange} placeholder="Password" className="form-control form-control-sm"
+                                                        type="text"
+                                                        required="" />
                                                 </div>
                                                 <div className="form-group">
-                                                    <button type="submit" onClick={this.tryLogin}className="btn btn-primary btn-block">Login</button>
+                                                    <button type="submit" onClick={this.tryLogin} className="btn btn-primary btn-block">Login</button>
                                                 </div>
                                                 <div className="form-group text-center">
                                                     <small><a href="#" data-toggle="modal" data-target="#modalPassword">Forgot password?</a></small>
