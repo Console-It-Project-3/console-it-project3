@@ -18,7 +18,7 @@ router.use("/potion", potionRoutes);
 router.use("/random", randomRoutes);
 router.use("/story", storyRoutes);
 
-router.get("*", (req, res) => {
+router.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "public", "index.html"));
 });
 
