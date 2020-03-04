@@ -47,12 +47,12 @@
             "text": "You buy as much time as you can while your neighbors manage to collect themselves and run to safety. You managed to cut down a few of the enemy, but you can hear the thunderous footsteps of many more on the way. You cannot fight all of them at once now, so the best thing to do would be to make a tactical retreat.",
             "options": [
                 {
-                    "text": "Fight another day",
+                    "text": "Get People to Safety",
                     "storyId": 6
                 },
                 {
-                    "text": "Hide at Home",
-                    "storyId": 5
+                    "text": "Get to The Forest",
+                    "storyId": 6
                 }
             ]
         },
@@ -116,7 +116,7 @@
     [
         {
             "story_ID": 0,
-            "text": "After surviving your encounther with Baltic's forces, you continue on your way along the forest",
+            "text": "After surviving your encounther with Baltic's forces, you continue on your way along the forest. After a few hours of traveling down the path, you finally feel like there is a good amount of distance between you and the Dark Army. You feel like you can afford to take at least a moment's rest. Taking a look around the area, you find there are very few spots that you can use. First off to your left is a clearing of trees out in the open. There is not much cover but there are plenlty of spots around to place make-shift alarms should something come and sneak up on you. off to your right looks to be a small cavern. It would provide a good amount of cover for you. The cavern is almost pitch black and the down side is that if there is something already, you might not see it coming before it's too late.",
             "options": [
                 {
                     "text": "Rest in the open",
@@ -130,7 +130,7 @@
         },
         {
             "story_ID": 1,
-            "text": "You place some small noise maker traps aaround you to alert you incase someone or something approaches you while you sleep",
+            "text": "You place some small noise maker traps around you to alert you incase someone or something approaches you while you sleep. The moment you sit down and lay your back against the tree, you fall asleep almost immediately. You're startled awake by some rustling from some of the bushes near by. You quickly jump to your feet and ready yourself for your next move. You could investigate the noise or take a different route by trying to find a new place to hide.",
             "options": [
                 {
                     "text": "Investigate the noise",
@@ -144,7 +144,7 @@
         },
         {
             "story_ID": 2,
-            "text": "Resting in the open is a needless risk, plus there are far more hiding places inside a cave",
+            "text": "Resting in the open provides a needless risk, one that you can't afford to take right now. You climb inside the mouth of the cavern and take a few steps to the right. You discovered a small little nook that looks just big enough for you to squeeze in. While it's not the most comfortable sleep ever, you are so wore out that you fall asleep almost instantly. You hear a loud noise coming from the outside of the cavern and alway of your senses are on high alert. It could be some of the Dark Army forces that are still in the area. You could got out there and try to investigate it, or you could move further into the cave, rather than risking a needless confrontation.",
             "options": [
                 {
                     "text": "Invesitigate",
@@ -158,10 +158,10 @@
         },
         {
             "story_ID": 3,
-            "text": "You approach the noise slowly, maintaining the element of surprise.",
+            "text": "You begin your approach on the noise, maintaining the element of surprise. A few seconds is all you would have to make a decision. After mentally preparing yourself, you jump through the buses and see a a couple of people from your village, curled up on the ground below. They are covered in wounds and their breathing is shallow. You realize that the two villagers maybe only have a few moments left to live. The wounds appear to have been made fairly recently, meaning that the Dark Army is currently lurking around. There is a noticeable trail of footprints from the couple. You could follow it and maybe find out more about the attack.",
             "options": [
                 {
-                    "text": "Follow the small child",
+                    "text": "Follow the trail",
                     "storyId": 5
                 },
                 {
@@ -172,56 +172,42 @@
         },
         {
             "story_ID": 4,
-            "text": "Further inside the cave you found, aside from large amounts of what you hope is mud, the space provies prefect cover while you try and get some rest.",
+            "text": "Further inside the cave you found, aside from large amounts of what you hope is mud, the space provies prefect cover while you try and get some rest. It is quiet, almost too quiet. A few moments pass, and the only noise you heard is your own heartbeat pounding in your chest. Almost like a cruel twist of fate, the moment you start to relax and feel at peace, a loud roar echoes around the cave behind you. Your feet start moving before you tell them too and soon you find yourself outside the cave. You take a moment to look behind you at what could possibly be making that noise when you see a large bear starting to peak out of the cavern. You notice a beaten path away from the cave.",
             "options": [
                 {
-                    "text": "Run away!",
-                    "storyId": 7
+                    "text": "Run!",
+                    "storyId": 5
                 },
                 {
-                    "text": "Follow the small footprints",
+                    "text": "Follow the path",
                     "storyId": 5
                 }
             ]
         },
         {
             "story_ID": 5,
-            "text": "The child, while in shock from being almost eaten, manages to get you towards her parents.",
+            "text": "You follow the trail and are distrubed at the sight of carnage in front of you. A number of wagons and carriages are laid out in front of you, wrecked to pieces. You quickly recognize some of them from your village, and your heart begins to sink. You had held on to some hope that maybe some of the villagers made it out safely. You investigate the area as much as you can but you've come to realize that there are no survivors. You seen large amounts of footprints of different sizez and species of creatures. The trail leads further away and towards the capital, Arcadia.",
             "options":[
                 {
-                    "text": "Save the Carvan",
+                    "text": "Follow The Trail",
                     "storyId":6
                 },
                 {
-                    "text": "Head The Other Way",
-                    "storyId": 7
+                    "text": "Bury The Dead",
+                    "storyId": 6
                 }
             ]
         },
         {
             "story_ID":6,
-            "text": "You run through tree branchs and shrubs until you find the remains of the caravan.",
+            "text": "Before you can make any choices, you heard rumbling coming from behind you. The bodies of the slain villagers started to rise up and before you could fully understand the sight you are seeing, the bodies underground brutal, unnerving change. These people, who were once your fellow neighbors, are transforming into nightmarish creatures and they have you in their sights. You are left with only one opition.",
             "options":[
                 {
                     "text": "Fight",
                     "storyId": "to battle"
                 },
                 {
-                    "text": "FIGHT!!!!",
-                    "storyId":"to battle"
-                }
-            ]
-        },
-        {
-            "story_ID":7,
-            "text": "Running away from the danger around, you find yourself dace to face with another life or death situation.",
-            "options":[
-                {
-                    "text": "Fight",
-                    "storyId": "to battle"
-                },
-                {
-                    "text": "FIGHT!!!!",
+                    "text": "Defend Yourself",
                     "storyId":"to battle"
                 }
             ]
@@ -230,113 +216,229 @@
     [
         {
             "story_ID": 0,
-            "text": "AFter discorving the truth behind the Dark Army soldiers, you are confronted with a basic truth, Baltic must be stopped.",
+            "text": "After discovering the truth behind the Dark Army soldiers, you are confronted with a basic truth, Baltic must be stopped. The Dark Army is using the bodies of their vicitims as new foot soldiers, which would explain how their forces never seem to be depleted. Leaving the carvan behind, you realize that you have to try and stop Baltic by any means necessary.",
             "options": [
                 {
                     "text": "Follow the trail",
                     "storyId": 1
                 },
                 {
-                    "text": "Look around for clues",
+                    "text": "Take a shortcut",
                     "storyId": 2
                 }
             ]
         },
         {
             "story_ID": 1,
-            "text": "time is off the essences and the Dark Army is getting closer to Arcadia. You follow the trail, hoping that you are not too late.",
+            "text": "Time is of the essence and the Dark Army is getting closer to Arcadia. You opt to follow the trail, hoping that you are not too late. In terms of a plan of action, well you don't really have one. All you know is that if Baltic and his army overtake the capital, there is no force in the world that can hope to defeat them. There are quite a few towns between your village and Arcadia and if Baltic wishes to increase his forces, he'll go throuogh each and every one of them. You realize that you are only a few miles away from the nearest town but chances are the town is already gone and you won't be able to do much to save it.",
             "options": [
                 {
-                    "text": "Take no breaks",
+                    "text": "Warn The Town",
                     "storyId": 3
                 },
                 {
-                    "text": "Rest up",
+                    "text": "Head to Arcadia",
                     "storyId": 4
                 }
             ]
         },
         {
             "story_ID": 2,
-            "text": "You may be the only one who knows the truth behind the Dark Army, and if there some chance you might be able to beat him, it might be better to look for clues.",
+            "text": "You have no time to waste. The Dark Army forces are growing by the day and it won't be long before they become too massive to stop. You move as quick as you can through the forest when you see one of your neighboring towns a few miles north from you. It doesn't appear to be under attack, and the more people you manage to save, the less forces the Dark Army has. There is still a great distance between you and the town however, and the Dark Army could be almost there already.",
             "options": [
                 {
-                    "text": "Look for clues",
-                    "storyId": 5
+                    "text": "Warn the Town",
+                    "storyId": 3
                 },
                 {
-                    "text": "Rest",
+                    "text": "Continue To Arcadia",
                     "storyId": 4
                 }
             ]
         },
         {
             "story_ID": 3,
-            "text": "You find yourself running ragged, but it seems that your efforts are fruitful. In the distance, you see that Dark Army and it's many soliders",
+            "text": "You find yourself making a beeline towards the town. You realize that deep down, you can't let anyone else become vicitim to Baltic's forces. You sprint as fast as you can to town, hoping that you can make it in time. You arrived, out of breash and ragged, but the town appears to be somewhat at peace. It last for just a moment as the ever familiar sound of thunderiong footsteps shake the ground beneath your feet. The Dark Army is here",
             "options": [
                 {
-                    "text": "Try and Cut Them Off",
+                    "text": "Abandon them",
                     "storyId": 6
                 },
                 {
-                    "text": "Grab a Horse",
+                    "text": "Save who you can",
                     "storyId": 5
                 }
             ]
         },
         {
             "story_ID": 4,
-            "text": "You feel well rested but paranoid that you lost some valuable time tracking down the Dark Army",
+            "text": "You feel guilty that you are willing to let another town suffer the same fate as your village, but you also realize that the capital should have more than enough forces to deal with the Dark Army. You continue on your path to Arcadia, hoping that there will be enough time to warn everyone and seal off the city. As you break through a line of trees, you feel the need to take once last look at the town, only to be haunted by what you have to bear witness to. The Dark Army is cutting through the town like a dagger to the heart. The screams of its people echo through you. It is a feeling you are far too familiar with. You realize that it is far too late to try and save anyone and with a heavy heart, you continue on your journey.",
             "options": [
                 {
                     "text": "Head towards the Capital",
-                    "storyId": 7
+                    "storyId": 6
                 },
                 {
-                    "text": "Head back home",
-                    "storyId": 5
+                    "text": "Head to the Town",
+                    "storyId": 7
                 }
             ]
         },
         {
             "story_ID": 5,
-            "text": "Back at home, you go over everything inside, looking any more useful items to take with you. The dark army is all but completely gone from your village and you don't want to waste any time and get caught. One thing is certain; however, you will never return to this home ever again. If the rumors are true, this land will be far too corrupted to ever be liveable again. You have only one option, The Avalon Forest. You remembered growing up how your parents always told you that if you should ever find yourself in trouble, take the path through the forest until you've found sanctuary.",
+            "text": "Time is short and the more people you can save, the better. You help families ot their carriages and wagons, directing people safely out of the town. You save as many as you can but not everyone makes it out alive. The Dark Army has grown larger since your last encounter with them. You can see the fear in the people's eyes as the look to you for some guidience.",
             "options":[
                 {
-                    "text": "Ready your weapon",
+                    "text": "Head to Arcadia",
                     "storyId":6
                 },
                 {
-                    "text": "Run Away",
+                    "text": "Make a stand",
                     "storyId": 7
                 }
             ]
         },
         {
             "story_ID":6,
-            "text": "Heading into the forest, you try and figure why your village was attacked. It has been nothing but peacful for as long as you can remember. You travel along the forest road until a feeling of dread washes over you. You turn around and come face to face with members of the Dark Army, stragglers that must have gotten too caught up in their chaotic activities. You know that you have no choice but to fight.",
+            "text": "The path to the capital is long and winding, and the guilt of abanding the townspeople weight heavily on your conscience but you can see the walls of Arcadia in sight. The Dark Army is in full force behind you, and although you had hope to avoid conflict until you make it to the walls, it seems tha fate has other ideas in mind. Some members of the Dark Army have started to gain on you and are prepared to take you life. You are left with on alternative but to fight.",
             "options":[
                 {
                     "text": "Fight",
                     "storyId": "to battle"
                 },
                 {
-                    "text": "FIGHT!!!!",
+                    "text": "Defend Yourself",
                     "storyId":"to battle"
                 }
             ]
         },
         {
             "story_ID":7,
-            "text": "Heading into the forest, you try and figure why your village was attacked. It has been nothing but peacful for as long as you can remember. You travel along the forest road until a feeling of dread washes over you. You turn around and come face to face with members of the Dark Army, stragglers that must have gotten too caught up in their chaotic activities. You look around for some sort of an escape route, but every possible route is block off by other Dark Army soldier. You have no other alternative but to fight.",
+            "text": "You walk through the caragne of broken homes and shops and come across of few stranglers of the Dark Army. The town is lost, that much is certain, but you blood begins to boil with unyielding rage. There were so many people you could have save, so many people that would still be around today if it wasn't for Baltic and his murderous brood. Although it would provide some small confort, you head into battle once more, hoping for some retribution.",
             "options":[
                 {
                     "text": "Fight",
                     "storyId": "to battle"
                 },
                 {
-                    "text": "FIGHT!!!!",
+                    "text": "Protect",
                     "storyId":"to battle"
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "story_ID": 0,
+            "text": "Barely surviving your latest encounter, you have finally made it to Arcadia. The guards appear to be on edge as you make your way through the gate. You have a feel that this fight against the Dark Army is coming to a head, which means that Baltic would soon be here. You wonder if you have enough in the tank to stop him. The threat of the Dark Army looms over the people inside the walls.",
+            "options": [
+                {
+                    "text": "Rest Up",
+                    "storyId": 1
+                },
+                {
+                    "text": "Help People inside",
+                    "storyId": 2
+                }
+            ]
+        },
+        {
+            "story_ID": 1,
+            "text": "You decided to find someplace and lay down for a moment. Facing Baltic at less than hundred is a foolish idea and would almost certainly mean your demise. The guards are more than capable of sorting through the fleeing villagers and townspeople. You find a nice little spot off in a corner and plop down for a bit of rest. You never realized how tired you were from all the fighting and running you have down in such a small amount of time.",
+            "options": [
+                {
+                    "text": "Dark Army arrives",
+                    "storyId": 3
+                },
+                {
+                    "text": "Search for Baltic",
+                    "storyId": 4
+                }
+            ]
+        },
+        {
+            "story_ID": 2,
+            "text": "There is no rest for the wicked, and you feel that it is your duty to help with the refugees from the Dark Army attacks. More and more people show up, seeking asylum inside the walls, and you do your best to get every one of them to safety, but a though occurs in the back of your mind. Will there be enough room to save everyone? You push this though from your head and focus on helping the next person, but soon that thought come back again. This is only a temporary solution, and you desprately need to come up with a more permanent one.",
+            "options": [
+                {
+                    "text": "Plan a Defense",
+                    "storyId": 5
+                },
+                {
+                    "text": "Search for Baltic",
+                    "storyId": 4
+                }
+            ]
+        },
+        {
+            "story_ID": 3,
+            "text": "You are awaken by a loud booming noise coming from the north gate where the guards are doing their best to try and get as many people as they can inside but the familiar march of thunderous steps prove one thing, the Dark Army is here. Batlic has arrived and seeks to lay waste to Arcadia and with it, the rest of the world.",
+            "options": [
+                {
+                    "text": "Challenge Batlic",
+                    "storyId": 6
+                },
+                {
+                    "text": "Search for Baltic",
+                    "storyId": 4
+                }
+            ]
+        },
+        {
+            "story_ID": 4,
+            "text": "Batlic is your main target, and everything else is just secondary. The Nerco-Knight is feared across the land as a fearsome warrior, unmatched in battle, and you, born outside the capital in some small village on the outskirts of the country, are planning on meeting him in battle. Not the greatest of plans, mind you, but perhaps if the Dark Army sees their infamous leader cut down, they'll scatter to the winds.",
+            "options": [
+                {
+                    "text": "Challenge Baltic",
+                    "storyId": 6
+                },
+                {
+                    "text": "Sneak Towards Batlic",
+                    "storyId": 5
+                }
+            ]
+        },
+        {
+            "story_ID": 5,
+            "text": "Baltic is here, leading the Dark Army against Arcadia's forces. You realize that you only need just one moment to take him down. The battle outside the walls is raging and with every fallen Arcadia soldier, another Dark Army solider rises. It wouldn't be long before The Dark Army greatly outnumbers the capital. You head down to the battle below. The Necro-Knight himself is fending off soldier after soldier of Arcadia's forces, but he is momentarily distracted. This is you moment to strike.",
+            "options":[
+                {
+                    "text": "Strike Him Down",
+                    "storyId": "boss battle"
+                },
+                {
+                    "text": "Make a stand",
+                    "storyId": "boss battle"
+                }
+            ]
+        },
+        {
+            "story_ID": 6,
+            "text": "Baltic and the Dark Army have taken everything from you, your friends, your home, everything you hold dear. The Dark Army is a forece of impossible strength and numbers and inside you, you feel a ting of fear. Something inside you is telling you to run, to run away as fast and as far as you can. You are not a natural born fighter, and you are thinking about challenging the most fearsome warrior of this era. You remember everything that Baltic has taken from you and you use that anger, the feeling of loss and the will to do what is right and charge forward. At the end of this day, one shall stand. One shall fall.",
+            "options":[
+                {
+                    "text": "Stand Your Ground",
+                    "storyId":"boss battle"
+                },
+                {
+                    "text": "Save The World",
+                    "storyId": "boss battle"
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "story_ID": 0,
+            "text": "You have done it. Baltic Blackwood has fallen and whatever sorcery or black magic he has infused his army with dies with him. The surviving members of the Dark Army soon all fade away into black specks on the ground. Arcadia stands and praises you as it's new champion. You feel a small sense of comfort as the attack on your village has been avenged. You look forward to the future, one of peace and tranquilty. The world is once again saved and it has you to thank",
+            "options":[
+                {
+                    "text": "High Scores",
+                    "storyId":"high scores"
+                },
+                {
+                    "text": "Play Again",
+                    "storyId": "character select"
                 }
             ]
         }
