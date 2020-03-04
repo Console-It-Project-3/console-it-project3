@@ -4,6 +4,7 @@ import characters from "./character.json"
 import { withRouter } from 'react-router-dom';
 import axios from 'axios'
 
+// comment
 
 class Character extends Component {
 
