@@ -41,9 +41,9 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(morgan('dev'))
 app.use(
-    bodyParser.urlencoded({
-        extended: false
-    })
+  bodyParser.urlencoded({
+    extended: false
+  })
 )
 app.use(bodyParser.json())
 
@@ -60,10 +60,10 @@ app.use("/api", apiRoutes);
 // Sessions
 app.use(
   session({
-      secret: 'special-harkening', //pick a random string to make the hash that is generated secure
-      // store: new MongoStore({ mongooseConnection: dbConnection }),
-      resave: false, //required
-      saveUninitialized: false //required
+    secret: 'special-harkening', //pick a random string to make the hash that is generated secure
+    // store: new MongoStore({ mongooseConnection: dbConnection }),
+    resave: false, //required
+    saveUninitialized: false //required
   })
 )
 
@@ -73,7 +73,7 @@ app.use(passport.session()) // calls the deserializeUser
 
 app.use(express.static(path.join(__dirname, "client", "build")))
 // Routes
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "public", "index.html"));
 });
 // app.use('/user', user)
@@ -83,6 +83,6 @@ app.get("*", (req, res) => {
 //   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 // });
 
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`🌎 http://localhost:${PORT}`);
 });
