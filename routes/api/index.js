@@ -18,4 +18,8 @@ router.use("/potion", potionRoutes);
 router.use("/random", randomRoutes);
 router.use("/story", storyRoutes);
 
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "public", "index.html"));
+});
+
 module.exports = router;
