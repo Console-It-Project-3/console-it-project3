@@ -77,7 +77,9 @@ class Battle extends Component {
             var self = this
             setTimeout(function () {
                 if (self.state.currentlyInBattle) {
-                    self.setState({ faded: true, battleDialogue: `You attacked! You dealt ${self.state.heroAttack} damage \n Enemey deal you ${self.state.enemyAttack}` })
+                    self.setState({ faded: true, battleDialogue: `You attacked! You dealt ${self.state.heroAttack} damage \n Enemey dealt you ${self.state.enemyList[self.state.battleCounter].enemyAttack}` })
+
+
                 }
 
             }, 100)
