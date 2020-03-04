@@ -36,7 +36,9 @@ class Battle extends Component {
         battleCounter: 0,
         enemyList: createEnemies(),
         storyID: 0,
+        storyCounter: 0,
         gameover: false,
+
     }
 
     handleButtonInventory = () => {
@@ -99,8 +101,8 @@ class Battle extends Component {
 
         if (this.state.random === 1) {
             this.setState({
-                runDia: `You could not get away and took ${this.state.enemyAttack} damage!`,
-                heroHP: this.state.heroHP - this.state.enemyAttack,
+                runDia: `You could not get away and took 15 damage!`,
+                heroHP: this.state.heroHP - 15,
                 runSuccess: false
             })
 
@@ -120,7 +122,8 @@ class Battle extends Component {
     handleRunContinue = () => {
         if (this.state.runSuccess === true) {
             this.setState({
-                battleRender: false
+                battleRender: false,
+                runShow: false
             })
         } else {
             this.setState({
@@ -156,13 +159,20 @@ class Battle extends Component {
 
         if (num == "to battle") {
             this.setState({
-                battleRender: true
+                battleRender: true,
+                storyCounter: this.state.storyCounter + 1,
+                storyID: 0,
+                battleCounter: 0,
+                enemyList: createEnemies(),
+                heroHP: 100
             })
         } else {
 
             this.setState({
                 storyID: num
             })
+            console.log("global story state", this.state.storyID);
+
         }
     }
 
@@ -192,7 +202,7 @@ class Battle extends Component {
                 ) : (
                         <div>
                             {/* <Moving /> */}
-                            <MoveText heroIndex={this.props.heroIndex} choiceBtn={this.choiceBtn} story={Story[this.state.storyID]} />
+                            <MoveText heroIndex={this.props.heroIndex} choiceBtn={this.choiceBtn} story={Story[this.state.storyCounter][this.state.storyID]} />
                         </div>
                     )}
                 {this.state.gameover ? (
