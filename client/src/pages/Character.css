@@ -3,15 +3,14 @@
     flex-direction: column;
     background: url(https://i.imgur.com/hwCNdW5.png);
     height: 100vh;
-    
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 
 .choose{
-    /* position: absolute;
-    top: 600px;
-    left: 275px; */
-    /* margin: auto; */
+   
     margin-left: 42% ;
     margin-top: 20px;
     justify-content: center;
