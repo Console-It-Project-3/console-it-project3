@@ -18,7 +18,7 @@ class Home extends Component {
             potionData: [],
             RandomData: [],
             storyData: [],
-            userData:[],
+            userData: [],
             username: null,
             password: null,
             user: null,

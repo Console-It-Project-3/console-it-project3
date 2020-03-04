@@ -7,9 +7,6 @@ button:focus {
     
 }
 
-.bg-dark{
-    background-color: #5a3c1c;
-}
 .landingImg{
     margin-top: -35px;
     margin-right: -50px;
@@ -23,15 +20,15 @@ button:focus {
     display: flex;
 }
 .jumbotron{
+    display: flex;
+    align-items: center;
     justify-content: center;
-    margin:10% 40% 0 40%;
+    margin:auto;
     margin-top:10%;
-    /* padding: 20px; */
+    width: 475px;
     max-width: 475px;
     background:url("https://i.imgur.com/0XoMcjD.png");
     background-size: 100% 100%;
-
-    font-family: Papyrus;
 }
 
 .jumboContain{
