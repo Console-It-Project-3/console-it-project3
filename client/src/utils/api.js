@@ -40,27 +40,27 @@ const API = {
         // return axios.get("http://localhost:3001/api/character/all");
     },
 
-    getEnemies: function () {
+    getAllEnemies: function () {
         // console.log("api")
         return axios.get("http://localhost:3001/api/enemies/all");
     },
-    getEquipment: function () {
+    getAllEquipment: function () {
         // console.log("api")
         return axios.get("http://localhost:3001/api/equipment/all");
     },
-    getFood: function () {
+    getAllFood: function () {
         // console.log("api")
         return axios.get("http://localhost:3001/api/food/all");
     },
-    getPotion: function () {
+    getAllPotion: function () {
         // console.log("api")
         return axios.get("http://localhost:3001/api/potion/all");
     },
-    getRandom: function () {
+    getAllRandom: function () {
         // console.log("api")
         return axios.get("http://localhost:3001/api/random/all");
     },
-    getStory: function () {
+    getAllStory: function () {
         // console.log("api")
         return axios.get("http://localhost:3001/api/story/all");
 

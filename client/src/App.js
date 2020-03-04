@@ -10,7 +10,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Signup from './pages/SignUp';
 import Login from "./pages/LogIn";
 
-
+function updateUser(userObject) {
+  this.setState(userObject)
+}
 
 function App() {
 

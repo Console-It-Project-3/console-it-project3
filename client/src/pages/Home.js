@@ -18,9 +18,14 @@ class Home extends Component {
             potionData: [],
             RandomData: [],
             storyData: [],
-            email: '',
-            password: ''
+            username: null,
+            password: null,
+            user: null,
+            redirectTo: null
         }
+        this.getUser = this.getUser.bind(this)
+        this.updateUser = this.updateUser.bind(this)
+        this.componentDidMount = this.getUser.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
     }
@@ -38,31 +43,31 @@ class Home extends Component {
         //     console.log("hit api zero", data);
         //     this.setState({ email: data.data })
         // })
-        API.getCharacters().then(data => {
+        API.getAllCharacters().then(data => {
             // console.log("hit api one", data.data);
             this.setState({ characterData: data.data })
         })
-        API.getEnemies({}).then(data => {
+        API.getAllEnemies({}).then(data => {
             // console.log("hit api two", data.data);
             this.setState({ enemiesData: data.data })
         })
-        API.getEquipment({}).then(data => {
+        API.getAllEquipment({}).then(data => {
             // console.log("hit api three", data.data);
             this.setState({ equipmentData: data.data })
         })
-        API.getFood({}).then(data => {
+        API.getAllFood({}).then(data => {
             // console.log("hit api four", data.data);
             this.setState({ foodData: data.data })
         })
-        API.getPotion({}).then(data => {
+        API.getAllPotion({}).then(data => {
             // console.log("hit api five", data.data);
             this.setState({ potionData: data.data })
         })
-        API.getRandom({}).then(data => {
+        API.getAllRandom({}).then(data => {
             // console.log("hit api six", data.data);
             this.setState({ RandomData: data.data })
         })
-        API.getStory({}).then(data => {
+        API.getAllStory({}).then(data => {
             // console.log("hit api seven", data.data);
             this.setState({ storyData: data.data })
         })
@@ -117,7 +122,7 @@ class Home extends Component {
                 console.log(response.status);
                 if (response.status === 200) {
                     console.log('successful login')
-                    this.props.updateUser({
+                    this.updateUser({
                         loggedIn: true,
                         username: response.data.username
                     })
