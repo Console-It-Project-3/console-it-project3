@@ -19,7 +19,7 @@ class Home extends Component {
             email: '',
             password: ''
         }
-        this.tryLogin = this.tryLogin.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
     }
 
@@ -71,40 +71,40 @@ class Home extends Component {
             [event.target.name]: event.target.value
         })
     }
-    tryLogin(event){
-        event.preventDefault();
-        console.log("clicking");
-        var obj = {
-            email: this.state.email,
-            password: this.state.password
-        }
-        console.log(obj)
-        axios
-            .post('/api/user/login', obj)
+    handleSubmit(event) {
+        console.log('sign-up handleSubmit, username: ')
+        console.log(this.state.username)
+
+        event.preventDefault()
+
+        //request to server to add a new username/password
+        axios.get('/api/user/login', {
+            username: this.state.username,
+            password: this.state.password,
+        })
             .then(response => {
-                console.log('login response: ')
+                console.log("login response: ");
                 console.log(response)
                 console.log(response.status);
                 if (response.status === 200) {
-                    // update App.js state
+                    console.log('successful login')
                     this.props.updateUser({
                         loggedIn: true,
                         username: response.data.username
                     })
-                    // update the state to redirect to home
-                    this.setState({
-                        redirectTo: '/character'
-                    })
-                }else {
-                    console.log('error')
+                    console.log(this.state);
+                    
+                    this.props.history.push('/character');
+                  
+                } else {
+                    console.log('repeating data, check error')
                 }
             }).catch(error => {
                 console.log('login error: ')
-                console.log(error);
+                console.log(error)
+
             })
     }
-
-
     render() {
         return (
 
@@ -136,7 +136,7 @@ class Home extends Component {
                                                     <input 
                                                     id="emailInput" 
                                                     name="email" 
-                                                    value={this.state.email}
+                                                    value={this.state.username}
                                                     onChange={this.handleChange} placeholder="Email" className="form-control form-control-sm" 
                                                     type="text" 
                                                     required="" />
@@ -150,7 +150,7 @@ class Home extends Component {
                                                     required="" />
                                                 </div>
                                                 <div className="form-group">
-                                                    <button type="submit" onClick={this.tryLogin}className="btn btn-primary btn-block">Login</button>
+                                                    <button type="submit" onClick={this.handleSubmit}className="btn btn-primary btn-block">Login</button>
                                                 </div>
                                                 <div className="form-group text-center">
                                                     <small><a href="#" data-toggle="modal" data-target="#modalPassword">Forgot password?</a></small>
@@ -178,4 +178,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default withRouter(Home);
