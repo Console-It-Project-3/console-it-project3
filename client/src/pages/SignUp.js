@@ -46,45 +46,47 @@ class Signup extends Component {
         // // if(this.state.password = null){
         // //     alert("password is needed")
         // // }
-        const { password, confirmPassword } = this.state;
-        if (password !== confirmPassword) {
-            alert("passwords don't match");
-            window.location.reload(false);
-        } else {
-        }
-        event.preventDefault()
+        if (this.state.username != '' && this.state.password != '' && this.state.firstname != '' && this.state.lastname != '' && this.state.email != '') {
+            const { password, confirmPassword } = this.state;
+            if (password !== confirmPassword) {
+                alert("passwords don't match");
+                window.location.reload(false);
+            } else {
+            }
+            event.preventDefault()
 
-        //request to server to add a new username/password
-        axios.post('/api/user/', {
-            username: this.state.username,
-            password: this.state.password,
-            firstname: this.state.firstname,
-            lastname: this.state.lastname,
-            email: this.state.email
-        })
-            .then(response => {
-                console.log(response)
-                if (!response.data.errmsg) {
-                    console.log('successful signup')
-                    this.props.history.push('/character');
-                    // this.setState({ //redirect to login page
-                    // 	redirectTo: ' /login'
-                    // })
-                } else {
-                    console.log('repeating data, check error')
-                }
-            }).catch(error => {
-                console.log('signup error: ')
-                console.log(error)
-
+            //request to server to add a new username/password
+            axios.post('/api/user/', {
+                username: this.state.username,
+                password: this.state.password,
+                firstname: this.state.firstname,
+                lastname: this.state.lastname,
+                email: this.state.email
             })
+                .then(response => {
+                    console.log(response)
+                    if (!response.data.errmsg) {
+                        console.log('successful signup')
+                        this.props.history.push('/character');
+                        // this.setState({ //redirect to login page
+                        // 	redirectTo: ' /login'
+                        // })
+                    } else {
+                        console.log('repeating data, check error')
+                    }
+                }).catch(error => {
+                    console.log('signup error: ')
+                    console.log(error)
+
+                })
+        }
     }
     render() {
         return (
 
             <div className="signup-box">
                 <div className="container-signup">
-                    <form className="needs-validation" noValidate>
+                    <form className="needs-validation" >
                         <div className="form-row">
                             <div className="col-md-4 mb-3">
                                 <label htmlFor="validationCustom01">First name: </label>
@@ -199,7 +201,7 @@ class Signup extends Component {
                     </form>
                 </div>
             </div>
-                
+
         )
     }
 }
