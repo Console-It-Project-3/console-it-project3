@@ -19,11 +19,11 @@ const characterSchema = new mongoose.Schema({
   // },
   class: {
     type: String,
-    default: ""
+    // default: ""
   },
   url:{
     type: String,
-    default:''
+    // default:''
   }
   // attack: {
   //   type: Number,
