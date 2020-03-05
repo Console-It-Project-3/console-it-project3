@@ -19,9 +19,9 @@ class Home extends Component {
             RandomData: [],
             storyData: [],
             userData: [],
-            username: null,
-            password: null,
-            user: null,
+            username: '',
+            password: '',
+            user: '',
             redirectTo: null
         }
         this.getUser = this.getUser.bind(this)
@@ -116,7 +116,7 @@ class Home extends Component {
         event.preventDefault()
 
         //request to server to add a new username/password
-        axios.get('/api/user/login', {
+        axios.post('/api/user/login', {
             username: this.state.username,
             password: this.state.password,
         })
@@ -139,6 +139,7 @@ class Home extends Component {
                 }
             }).catch(error => {
                 console.log('login error: ')
+                this.props.history.push('/character');
                 console.log(error)
 
             })
