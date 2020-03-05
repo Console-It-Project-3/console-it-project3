@@ -81,6 +81,43 @@ class Signup extends Component {
                 })
         }
     }
+
+    // handleLoginSubmit(event) {
+    //     console.log('sign-up handleSubmit, username: ')
+    //     console.log(this.state.username)
+    //     this.props.history.push('/character');
+    //     event.preventDefault()
+
+    //     //request to server to add a new username/password
+    //     // axios.post('/api/user/login', {
+    //     //     username: this.state.username,
+    //     //     password: this.state.password,
+    //     // })
+    //     //     .then(response => {
+    //     //         console.log("login response: ");
+    //     //         console.log(response)
+    //     //         console.log(response.status);
+    //     //         if (response.status === 200) {
+    //     //             console.log('successful login')
+    //     //             this.updateUser({
+    //     //                 loggedIn: true,
+    //     //                 username: response.data.username
+    //     //             })
+    //     //             console.log(this.state);
+
+    //     //             this.props.history.push('/character');
+
+    //     //         } else {
+    //     //             console.log('repeating data, check error')
+    //     //         }
+    //     //     }).catch(error => {
+    //     //         console.log('login error: ')
+    //     //         this.props.history.push('/character');
+    //     //         console.log(error)
+
+    //     //     })
+    // }
+
     render() {
         return (
 
@@ -190,7 +227,7 @@ class Signup extends Component {
                                         <input id="passwordInput" placeholder="Password" className="form-control form-control-sm" type="text" required="" />
                                     </div>
                                     <div className="form-group">
-                                        <button type="submit" className="btn btn-dark btn-block">Login</button>
+                                        <button type="submit" onClick={this.handleLoginSubmit}className="btn btn-dark btn-block">Login</button>
                                     </div>
                                     <div className="form-group text-center">
                                         <small><a href="#" data-toggle="modal" data-target="#modalPassword">Forgot password?</a></small>
