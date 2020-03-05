@@ -224,7 +224,7 @@ class Signup extends Component {
                                         <input id="emailInput" placeholder="Email" className="form-control form-control-sm" type="text" required="" />
                                     </div>
                                     <div className="form-group">
-                                        <input id="passwordInput" placeholder="Password" className="form-control form-control-sm" type="text" required="" />
+                                        <input id="passwordInput" placeholder="Password" className="form-control form-control-sm" type="password" required="" />
                                     </div>
                                     <div className="form-group">
                                         <button type="submit" onClick={this.handleLoginSubmit}className="btn btn-dark btn-block">Login</button>

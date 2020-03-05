@@ -185,7 +185,7 @@ class Home extends Component {
                                                         id="passwordInput" name="password"
                                                         value={this.state.password}
                                                         onChange={this.handleChange} placeholder="Password" className="form-control form-control-sm"
-                                                        type="text"
+                                                        type="password"
                                                         required="" />
                                                 </div>
                                                 <div className="form-group">
