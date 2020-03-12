@@ -1,6 +1,6 @@
 .battleDialogue{
     /* max-width: 55vw; */
-    padding: 100px 0 0 20%;
+    padding: 100px 0 0 40%;
     color:black;
     font-size: 20px;
     font-weight: bold;
@@ -29,8 +29,8 @@
     /* position: relative; */
     position: absolute;
     /* right: 100px; */
-    bottom: 40px;
-    right: 20px;
+    bottom: 120px;
+    right: 220px;
 
 }
 .battleButton1,
