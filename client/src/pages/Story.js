@@ -17,14 +17,14 @@ import Boss from "./boss.json"
 class Battle extends Component {
 
     state = {
-        heroHP: 100,
+        heroHP: 130,
         heroAttack: 20,
         heroMaxHP: 100,
         battleDialogue: "An enemy wants to fight! What would you like to do? ",
         currentlyInBattle: true,
         faded: true,
         inventory: [
-            "potion", "golden apple", "steak", "other things"
+            "potion", "golden apple", "other things"
         ],
         invenShow: false,
         endShow: false,
@@ -41,11 +41,12 @@ class Battle extends Component {
         storyCounter: 0,
         gameover: false,
         bossRender: false,
+        disabled: false,
 
     }
 
     handleButtonInventory = () => {
-        console.log("clicked");
+
         this.setState({
             invenShow: !this.state.invenShow
         })
@@ -68,7 +69,11 @@ class Battle extends Component {
                     this.endBattle()
 
                 }
-
+                if (this.state.enemyList[this.state.battleCounter].enemyHP <= 0) {
+                    this.setState({
+                        disabled: true
+                    })
+                }
                 if (this.state.heroHP <= 0) {
                     this.setState({
                         gameover: true
@@ -187,7 +192,8 @@ class Battle extends Component {
             battleCounter: this.state.battleCounter + 1,
             currentlyInBattle: true,
             endShow: false,
-            bossRender: false
+            bossRender: false,
+            disabled: false,
         }, function () {
             if (this.state.battleCounter === 3) {
                 this.setState({
@@ -235,7 +241,7 @@ class Battle extends Component {
 
 
     handleGameOver = () => {
-        window.location.href = "highscore"
+        this.props.history.push('/highscore')
 
     }
 
@@ -249,7 +255,7 @@ class Battle extends Component {
                         <Moving />
                         {this.state.enemyList[this.state.battleCounter] ? (<BattleStats heroIndex={this.props.heroIndex} heroHP={this.state.heroHP} heroMaxHP={this.state.heroMaxHP} enemy={this.state.enemyList[this.state.battleCounter]} />) : ''}
 
-                        <BattleText handleButtonFight={this.handleButtonFight} handleButtonInventory={this.handleButtonInventory} handleButtonQuit={this.handleButtonQuit} handleButtonRun={this.handleButtonRun} battleDialogue={this.state.battleDialogue} faded={this.state.faded} />
+                        <BattleText handleButtonFight={this.handleButtonFight} disabled={this.state.disabled} handleButtonInventory={this.handleButtonInventory} handleButtonQuit={this.handleButtonQuit} handleButtonRun={this.handleButtonRun} battleDialogue={this.state.battleDialogue} faded={this.state.faded} />
                         <Inventory handleButtonInventory={this.handleButtonInventory} inventory={this.state.inventory} invenShow={this.state.invenShow} />
                         <ReturnToStory handleReturnStory={this.handleReturnStory} endShow={this.state.endShow} />
                         <Run handleRunContinue={this.handleRunContinue} runShow={this.state.runShow} runDia={this.state.runDia} runClass={this.state.runClass} />
@@ -266,7 +272,7 @@ class Battle extends Component {
                     <div>
                         <Moving />
                         <BattleStats heroIndex={this.props.heroIndex} heroHP={this.state.heroHP} heroMaxHP={this.state.heroMaxHP} enemy={Boss} />
-                        <BattleText handleButtonFight={this.handleButtonFight} handleButtonInventory={this.handleButtonInventory} handleButtonQuit={this.handleButtonQuit} handleButtonRun={this.handleButtonRun} battleDialogue={this.state.battleDialogue} faded={this.state.faded} />
+                        <BattleText handleButtonFight={this.handleButtonFight} disabled={this.state.disabled} handleButtonInventory={this.handleButtonInventory} handleButtonQuit={this.handleButtonQuit} handleButtonRun={this.handleButtonRun} battleDialogue={this.state.battleDialogue} faded={this.state.faded} />
                         <Inventory handleButtonInventory={this.handleButtonInventory} inventory={this.state.inventory} invenShow={this.state.invenShow} />
                         <ReturnToStory handleReturnStory={this.handleReturnStory} endShow={this.state.endShow} />
                         <Run handleRunContinue={this.handleRunContinue} runShow={this.state.runShow} runDia={this.state.runDia} runClass={this.state.runClass} />
