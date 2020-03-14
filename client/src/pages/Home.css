@@ -14,8 +14,10 @@ button:focus {
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
-    min-height: 800px;
-    min-width: 1560px;
+    /* min-height: 800px;
+    min-width: 1560px; */
+    height: 104.5vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,6 +29,9 @@ button:focus {
     max-width: 475px;
     background:url("https://i.imgur.com/0XoMcjD.png");
     background-size: 100% 100%;
+    /* position: absolute;
+    top: 50px;
+    left: 500px; */
 }
 
 .jumboContain{
@@ -42,4 +47,8 @@ button:focus {
     background: #5a3c1c;
     border: none;
     width: 300px;
+}
+.playBtn:hover{
+    background: #5a3c1c;
+    border: 1pt solid black;
 }

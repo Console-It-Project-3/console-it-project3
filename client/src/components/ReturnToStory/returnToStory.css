@@ -1,6 +1,6 @@
 .returnStory{
     position: absolute;
-    bottom: 75px;
+    top: 550px;
     left: 250px;
     padding: 7px 25px;
     background: #5a3c1c;
@@ -11,18 +11,39 @@
     font-size: 30px;
 }
 
-@media only screen and (max-width: 780px){
+@media only screen and (max-width: 950px){
     .returnStory{
-        bottom: 160px;
+       top: 475px;
+       left: 340px;
     }
 }
-@media only screen and (max-width: 580px){
+@media only screen and (max-width: 725px){
+    .returnStory{
+        left: 275px;
+    }
+}
+@media only screen and (max-width: 650px){
+    .returnStory{
+        left: 265px;
+        top: 400px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .returnStory{
+        left: 200px;
+        
+    }
+}
+@media only screen and (max-width: 600px){
     .returnStory{
         left: 150px;
+        
     }
 }
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 460px){
     .returnStory{
-        left: 75px;
+        left: 100px;
+        
     }
 }
+
