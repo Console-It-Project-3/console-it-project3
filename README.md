@@ -1,21 +1,48 @@
 # Knight Fall
 
-## Objective
+## Description
 
-Our objective was to create a fun experience in the form of an Role Playing Game. Our game is called KnightFall. The user will be brought into our medievil world with their choice of character and then taken along through the journey with story and battles.
+A fun story based role playing game where the user is thrust into a medieval time where the hero's home town is under attack from the merceneries of Baltic Blackwood. The hero must choose their own adventure as they navigate the countryside in search of Baltic and his goons. 
 
-## Purpose 
+## Usage
 
-Our purpose is to entertain our player and bring joy to all that play
+This application is being run by Heroku and can be played at: https://lit-woodland-52997.herokuapp.com/
 
-## Process
+To begin, simply click on "Play Now" and navigate through the sign up page. Once signed up, the user may choose one of 4 characters. After selecting a character, the user is brought into the game play. 
 
-We split up into two teams front-end and back-end. After planing out our flow for the game we started by working separately. We eventually came together to connect everything and polish our final project. 
+## Screenshots
 
-## Goals
+![Landing Page](https://i.imgur.com/NBv8IGT.png)
 
-Our first goal for the future is to make the game responsive and progressive for all mobil devices. We also want to polish our Log-in feature to make sure our users can leave the game and then pick back oup where they left off. 
+![Sign Up](https://i.imgur.com/5PYtEok.png)
 
-We would also love for our users to be able to buy items for their character using their game points. 
+![Character Select](https://i.imgur.com/4oO90Tb.png)
 
-We also have plans to expand the story for even more game play. 
+![Story](https://i.imgur.com/T5kAyqa.png)
+
+![Battle](https://i.imgur.com/liYhw6x.png)
+
+![Market](https://i.imgur.com/4Y5B7hp.png)
+
+## Future Implimentations
+
+Make the game responsive and progressive for all mobile devices. 
+
+Polish our Log-in feature to make sure our users can leave the game and then pick back oup where they left off. 
+
+Ablity to buy items for their character using their in-game currency. 
+
+Expand the story for even more game play. 
+
+## Team Members 
+
+### Front-End
+    Andre Entrekin
+    Luis Martinez
+
+### Back-end
+    Kaitlyn Salemi
+    Jose Castro
+
+### Project Manager
+    Colin Goodale    
