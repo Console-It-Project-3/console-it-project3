@@ -6,7 +6,7 @@ A fun story based role playing game where the user is thrust into a medieval tim
 
 ## Usage
 
-This application is being run by Heroku and can be played at: https://thawing-cliffs-03966.herokuapp.com/
+This application is being run by Heroku and can be played at: https://thawing-cliffs-03966.herokuapp.com/     
 
 To begin, simply click on "Play Now" and navigate through the sign up page. Once signed up, the user may choose one of 4 characters. After selecting a character, the user is brought into the game play. 
 
