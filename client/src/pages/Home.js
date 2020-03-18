@@ -205,7 +205,7 @@ class Home extends Component {
 
                 <div className="jumbotron">
                     <div className="jumboContain">
-                        <h1 className="display-4">KnightFall</h1>
+                        <h1 className="display-4 jumboTitle">KnightFall</h1>
                         <p className="lead">In a world where evil is left to thrive, a hero is needed to bring justice to the land! </p>
                         <hr className="my-4"></hr>
                         <p className="call2Action">Will you be that hero?</p>
