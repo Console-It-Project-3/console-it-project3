@@ -7,8 +7,10 @@ function inventory({ inventory, invenShow, handleButtonInventory }) {
 
     const invenClass = invenShow ? 'invenBox' : 'hide invenBox'
 
+    const self = this
     function useBtn() {
-        console.log(this)
+        console.log(this);
+
     }
 
 
@@ -16,7 +18,7 @@ function inventory({ inventory, invenShow, handleButtonInventory }) {
         <div className={invenClass}>
             <p className="invenHead">Inventory</p>
             <ul className="items">
-                {inventory.map(item => (<li><button onClick={useBtn} className="itemBtn">use</button> {item} </li>))}
+                {inventory.map(item => (<li><button onClick={useBtn} id={item} className="itemBtn">use</button> {item} </li>))}
             </ul>
             <button onClick={handleButtonInventory} className="closeBtn">Close</button>
         </div>

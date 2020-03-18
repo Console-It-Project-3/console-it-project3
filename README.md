@@ -34,7 +34,7 @@ To begin, simply click on "Play Now" and navigate through the sign up page. Once
 
 Make the game responsive and progressive for all mobile devices. 
 
-Polish our Log-in feature to make sure our users can leave the game and then pick back oup where they left off. 
+Polish our Log-in feature to make sure our users can leave the game and then pick back up where they left off. 
 
 Ablity to buy items for their character using their in-game currency. 
 
@@ -43,12 +43,12 @@ Expand the story for even more game play.
 ## Team Members 
 
 ### Front-End
-[Andre Entrekin](https://github.com/AndreTheTallGuy)
-[Luis Martinez](https://github.com/Lpmartinez1109)
+####[Andre Entrekin](https://github.com/AndreTheTallGuy)
+####[Luis Martinez](https://github.com/Lpmartinez1109)
 
 ### Back-end
-[Kaitlyn Salemi](https://github.com/KaitlynSalemi)
-[Jose Castro](https://github.com/jacastro023)
+####[Kaitlyn Salemi](https://github.com/KaitlynSalemi)
+####[Jose Castro](https://github.com/jacastro023)
 
 ### Project Manager
-[Colin Goodale](https://github.com/colingoodale)    
+####[Colin Goodale](https://github.com/colingoodale)    
