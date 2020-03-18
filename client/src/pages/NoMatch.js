@@ -84,7 +84,6 @@ class NoMatch extends Component {
                 </div>
                 <div className="errorModal">
                     <h1 className="errorTitle">Error 404</h1>
-                    <hr></hr>
                     <p className="errorBody">This page does not exist. Time to go back the way you came</p>
                     <a className="errorBtn" href="/home" role="button">Home</a>
                 </div>

@@ -1,7 +1,7 @@
 .pText{
     margin-top: 50px;
     max-width: 55vw;
-    padding: 0px 0 0 175px;
+    padding: 0px 0 0 200px;
     color:black;
     font-size: 20px;
     font-weight: bold;
@@ -56,6 +56,9 @@
     .storyButtons{
         left:475px;
     }  
+    .pText{
+        padding-left: 175px;
+    }
 }
 @media only screen and (max-width: 1050px){
     .pText{
