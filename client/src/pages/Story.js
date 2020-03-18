@@ -17,9 +17,9 @@ import Boss from "./boss.json"
 class Battle extends Component {
 
     state = {
-        heroHP: 130,
+        heroHP: 150,
         heroAttack: 20,
-        heroMaxHP: 100,
+        heroMaxHP: 150,
         battleDialogue: "An enemy wants to fight! What would you like to do? ",
         currentlyInBattle: true,
         faded: true,
@@ -215,12 +215,12 @@ class Battle extends Component {
                 storyID: 0,
                 battleCounter: 0,
                 enemyList: createEnemies(),
-                heroHP: 100
+                heroHP: 150
             })
         } else if (num === "boss battle") {
             this.setState({
                 bossRender: true,
-                heroHP: 100,
+                heroHP: 150,
                 storyCounter: this.state.storyCounter + 1,
                 storyID: 0,
             })
