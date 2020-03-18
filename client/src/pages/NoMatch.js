@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import "./NoMatch.css"
 
 class NoMatch extends Component {
     render() {
         return (
-            <div>
+            <div className="noMatchPage">
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
                     <div className="container">
                         <a className="navbar-brand" href="/home">KnightFall</a>
@@ -13,9 +14,7 @@ class NoMatch extends Component {
                         <div className="collapse navbar-collapse" id="exCollapsingNavbar">
                             <ul className="nav navbar-nav">
                                 <li className="nav-item"><a href="/" className="nav-link">Home</a></li>
-                                <li className="nav-item"><a href="/" className="nav-link">About Us</a></li>
-                                <li className="nav-item"><a href="/" className="nav-link">Contact Us</a></li>
-                                {/* <li className="nav-item"><a href="#" className="nav-link">More</a></li> */}
+
                             </ul>
                             <ul className="nav navbar-nav flex-row justify-content-between ml-auto">
                                 <li className="nav-item order-2 order-md-1"><a href="#" className="nav-link" title="settings"><i className="fa fa-cog fa-fw fa-lg"></i></a></li>
@@ -83,11 +82,11 @@ class NoMatch extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="jumbotron">
-                <h1>Error 404</h1>
-                <hr></hr>
-                <p>This page does not exist. Time to go back the way you came</p>
-                <a className="btn btn-secondary btn-lg btn-block" href="/home" role="button">Home</a>
+                <div className="errorModal">
+                    <h1 className="errorTitle">Error 404</h1>
+                    <hr></hr>
+                    <p className="errorBody">This page does not exist. Time to go back the way you came</p>
+                    <a className="errorBtn" href="/home" role="button">Home</a>
                 </div>
             </div>
         )
