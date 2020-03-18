@@ -78,7 +78,7 @@
 @media only screen and (max-width: 900px){
     .pText{
         overflow: auto;
-        max-height: 400px;
+        max-height: 375px;
     }
 }
 

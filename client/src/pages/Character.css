@@ -11,8 +11,9 @@
 
 .choose{
    
-    margin-left: 42% ;
-    margin-top: 120px;
+    /* margin-left: 42% ; */
+    /* margin-top: 20px auto 0 auto; */
+    margin: 20px auto;
     justify-content: center;
     height: 50px;
     background: #5a3c1c;
@@ -70,4 +71,24 @@
     border-radius: 10px;
     padding: 10px 20px;
     margin-left: 160px;
+}
+
+@media only screen and (max-width: 500px){
+    .sprite{
+        max-height: 300px;
+        min-height: 300px;
+        margin-top: 100px;
+    }
+    .failedLogin{
+        width: 300px;
+    }
+    .failedTitle{
+        font-size: 20px;
+    }
+    .failedBody{
+        font-size: 15px;
+    }
+    .Ok{
+        margin-left: 110px;
+    }
 }
