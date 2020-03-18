@@ -3,6 +3,7 @@ import "./Character.css"
 import characters from "./character.json"
 import { withRouter } from 'react-router-dom';
 import axios from 'axios'
+import Login from "./LogIn";
 
 // comment
 
@@ -13,7 +14,8 @@ class Character extends Component {
         curCharacter: {},
         curDescription: "This is a text",
         heroIndex: 1,
-        coolDown: false
+        coolDown: false,
+        Login: false
 
     }
     componentDidMount() {
@@ -25,7 +27,7 @@ class Character extends Component {
     handleButtonChoose = () => {
         console.log("clicked this is current hero Index!!!", this.state.heroIndex);
         this.props.setHeroIndex(this.state.heroIndex)
-        // window.location.href = "story"
+
         console.log(this.state.data[this.state.heroIndex])
         axios.post('/api/character/', {
             character: this.state.data[this.state.heroIndex],
@@ -45,6 +47,8 @@ class Character extends Component {
             }).catch(error => {
                 console.log('login error: ')
                 console.log(error)
+                this.setState({ login: true })
+
 
             })
 
@@ -88,6 +92,10 @@ class Character extends Component {
         }
     }
 
+    handleButtonOK = () => {
+        this.props.history.push('/signup')
+    }
+
     render() {
         console.log('this is our state', this.state)
         console.log('this is our props', this.props)
@@ -126,6 +134,14 @@ class Character extends Component {
                     ) : ''}
 
                 </div>
+
+                {this.state.login ? (
+                    <div className="failedLogin">
+                        <p className="failedTitle">You are not logged in!</p>
+                        <p className="failedBody">Please log in or sign up to play</p>
+                        <button onClick={this.handleButtonOK} className="Ok">Ok</button>
+                    </div>
+                ) : ''}
 
                 <button onClick={this.handleButtonChoose} className="choose">Choose Character</button>
 
