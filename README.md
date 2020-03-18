@@ -12,16 +12,22 @@ To begin, simply click on "Play Now" and navigate through the sign up page. Once
 
 ## Screenshots
 
+#### Landing Page
 ![Landing Page](https://i.imgur.com/NBv8IGT.png)
 
+#### Sign Up
 ![Sign Up](https://i.imgur.com/5PYtEok.png)
 
+#### Character Select
 ![Character Select](https://i.imgur.com/4oO90Tb.png)
 
+#### Story
 ![Story](https://i.imgur.com/T5kAyqa.png)
 
+#### Battle
 ![Battle](https://i.imgur.com/liYhw6x.png)
 
+#### Market
 ![Market](https://i.imgur.com/4Y5B7hp.png)
 
 ## Future Implimentations
@@ -37,12 +43,12 @@ Expand the story for even more game play.
 ## Team Members 
 
 ### Front-End
-    Andre Entrekin
-    Luis Martinez
+[Andre Entrekin](https://github.com/AndreTheTallGuy)
+[Luis Martinez](https://github.com/Lpmartinez1109)
 
 ### Back-end
-    Kaitlyn Salemi
-    Jose Castro
+[Kaitlyn Salemi](https://github.com/KaitlynSalemi)
+[Jose Castro](https://github.com/jacastro023)
 
 ### Project Manager
-    Colin Goodale    
+[Colin Goodale](https://github.com/colingoodale)    
