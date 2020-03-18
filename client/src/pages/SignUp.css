@@ -2,6 +2,18 @@ body{
     font-family: Papyrus;
 }
 
+.signup-box{
+    margin:auto;
+    padding-top:15%;
+    padding-bottom: 30%;
+    background: url(https://i.imgur.com/57TTWUF.png) no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    
+
+}
+
 .container-signup {
     max-width: 475px;
     margin:auto;
@@ -14,13 +26,5 @@ body{
     padding: 15px;
     background: aliceblue;
     
-}
-.signup-box{
-    margin:auto;
-    padding-top:15%;
-    padding-bottom: 30%;
-    background: url(https://i.imgur.com/57TTWUF.png) no-repeat;
-    font-family: Papyrus;
-
 }
 
