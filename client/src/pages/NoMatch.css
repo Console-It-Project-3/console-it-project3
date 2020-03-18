@@ -1,0 +1,47 @@
+.noMatchPage{
+    display: flex;
+    flex-direction: column;
+    background: url(https://i.imgur.com/hwCNdW5.png);
+    height: 100vh;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.errorModal{
+    display: block;
+    width: 400px;
+    height: 400px;
+    background:url("https://i.imgur.com/0XoMcjD.png");
+    background-size: 100% 100%;
+    margin: 150px auto 0 auto;
+    z-index: 5;
+}
+
+.errorTitle,
+.errorBody{
+    text-align: center;
+    font-weight: bold;
+}
+.errorTitle{
+    padding-top: 80px;
+    font-size: 30px;
+}
+
+.errorBody{
+    font-size: 20px;
+    width: 300px;
+    margin: auto;
+    margin-bottom: 40px;
+    /* padding: 20px 0 0 80px; */
+    /* padding-left: 40px; */
+}
+.errorBtn{
+    background: #5a3c1c;
+    color: bisque;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-left: 160px;
+    margin-top: 130px;
+}
