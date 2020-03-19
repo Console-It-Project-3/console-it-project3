@@ -43,12 +43,14 @@ Expand the story for even more game play.
 ## Team Members 
 
 ### Front-End
-####[Andre Entrekin](https://github.com/AndreTheTallGuy)
-####[Luis Martinez](https://github.com/Lpmartinez1109)
+[Andre Entrekin](https://github.com/AndreTheTallGuy)
+
+[Luis Martinez](https://github.com/Lpmartinez1109)
 
 ### Back-end
-####[Kaitlyn Salemi](https://github.com/KaitlynSalemi)
-####[Jose Castro](https://github.com/jacastro023)
+[Kaitlyn Salemi](https://github.com/KaitlynSalemi)
+
+[Jose Castro](https://github.com/jacastro023)
 
 ### Project Manager
-####[Colin Goodale](https://github.com/colingoodale)    
+[Colin Goodale](https://github.com/colingoodale)    

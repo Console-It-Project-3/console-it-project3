@@ -88,7 +88,7 @@ class Battle extends Component {
                 var self = this
                 setTimeout(function () {
                     if (self.state.currentlyInBattle) {
-                        self.setState({ faded: true, battleDialogue: `You attacked! You dealt ${self.state.heroAttack} damage \n Enemey dealt you ${self.state.enemyList[self.state.battleCounter].enemyAttack}` })
+                        self.setState({ faded: true, battleDialogue: `You attacked! You dealt ${self.state.heroAttack} damage \n Enemy dealt you ${self.state.enemyList[self.state.battleCounter].enemyAttack}` })
 
 
                     }
@@ -121,7 +121,7 @@ class Battle extends Component {
                 var self = this
                 setTimeout(function () {
                     if (self.state.currentlyInBattle) {
-                        self.setState({ faded: true, battleDialogue: `You attacked! You dealt ${self.state.heroAttack} damage \n Enemey dealt you ${Boss.enemyAttack}` })
+                        self.setState({ faded: true, battleDialogue: `You attacked! You dealt ${self.state.heroAttack} damage \n Enemy dealt you ${Boss.enemyAttack}` })
 
 
                     }
@@ -194,6 +194,7 @@ class Battle extends Component {
             endShow: false,
             bossRender: false,
             disabled: false,
+            battleDialogue: "Another enemy wants to fight! What would you like to do? "
         }, function () {
             if (this.state.battleCounter === 3) {
                 this.setState({
@@ -215,7 +216,8 @@ class Battle extends Component {
                 storyID: 0,
                 battleCounter: 0,
                 enemyList: createEnemies(),
-                heroHP: 150
+                heroHP: 150,
+                battleDialogue: "An enemy wants to fight! What would you like to do? "
             })
         } else if (num === "boss battle") {
             this.setState({
